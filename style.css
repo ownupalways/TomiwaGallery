@@ -478,9 +478,9 @@ box-shadow: var(--box-shadow);
     -webkit-backface-visibility: hidden;
 }
 
-.flip{
+.box-container1 .images .front-face .flip{
     position:absolute;
-    margin:20px 350px;
+    margin: 2rem;
     cursor: pointer;
     font-size: 15px;
     width:70px;
@@ -494,6 +494,7 @@ box-shadow: var(--box-shadow);
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
+
 .box-container1 .images .back-face{
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -556,6 +557,10 @@ box-shadow: var(--box-shadow);
     -ms-border-radius: 8px 8px 0 0;
     -o-border-radius: 8px 8px 0 0;
 }
+
+.box-container1 .images .image-title{
+    text-align: center;
+}
 .box-container1 .images #myBtn{
     display: flex;
     justify-content: center;
@@ -614,6 +619,7 @@ box-shadow: var(--box-shadow);
     .box-container1 .images #myBtn .fab{
         font-size:10px;
     }
+
 }
 
 @media(min-width:850px) {
@@ -637,6 +643,7 @@ box-shadow: var(--box-shadow);
     .box-container1 .images #myBtn .fab{
         font-size:10px;
     }
+
 }
 
 /*Styling About Page*/
