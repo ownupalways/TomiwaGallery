@@ -23,7 +23,6 @@ body{
     background: url(images/Bground3.jpg);
     background-position: cover cover;
     background-blend-mode: var(--pinky);
-    position: relative;
 }
 
 html{
@@ -127,7 +126,7 @@ html{
         -moz-transition: all 0.5s ease-in;
         -ms-transition: all 0.5s ease-in;
         -o-transition: all 0.5s ease-in;
-}
+    }
 
     .navbar .nav-link a{
         display: block;
@@ -148,52 +147,110 @@ html{
 
    /*when nav toggle button is checked*/
     .navbar #nav-check:checked ~ .nav-link{
-        height: calc(70vh - 120px);
+        height: calc(100vh - 120px);
         overflow-y: auto;
     }
 }
 
 /*styling background image slide*/
 .parent{
-    padding: .5rem;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    column-gap: 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 5rem;
+    gap: 20px;
 }
 
-.mySlides{
-    display: none;
-    width: 500px;
+.parent .container{
+    max-width: 500px;
 }
 
+.parent .container .intro .box{
+    box-shadow:var(--box-shadow);
+    border-radius: 5px;
+    /*border: 2px var(--pinky) solid;*/
+    background-color: rgb(0,0,0);
+    background-color:var(--background);
+}
+.parent .container .intro .box p{
+    padding: 15px;
+    font-size: 15px;
+    font-family: 'Quintessential', cursive;
+    color: var(--light-bg);
+    overflow-wrap: break-word;
+    text-align: justify;
+}
+.parent .container .intro .box p a{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    color: var(--pinky);
+}
 
-.mySlides img{
-    grid-column:1;
-    grid-row: 1;
-    width: 600px;
-    height: 530px;
+.parent .slideshow-container {
+    max-width: 500px;
+    position: relative;
+}
+.parent .slideshow-container .mySlides {
+    max-width: 800px;
+    height: 500px;
+}
+
+.parent .slideshow-container .mySlides .responsive{
+    width: 450px;
+    height: 100%;
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
 }
-
-.mySlides .text{
-    grid-column:1;
-    grid-row: 1;
+.parent .slideshow-container .mySlides .text {
+    position: absolute;
+    top: 0;
     color: var(--light-bg);
     font-size: 50px;
-    border-radius: 8px 8px 0 0;
+    height:100%;
+    width: 100%;
+    border-radius: 8px;
     text-align: center;
     padding: 20px auto;
-    align-self: start;
     font-weight: bolder;
     background: var(--background);
-    -webkit-border-radius: 8px 8px 0 0;
-    -moz-border-radius: 8px 8px 0 0;
-    -ms-border-radius: 8px 8px 0 0;
-    -o-border-radius: 8px 8px 0 0;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    z-index:1;
+}
+@media (max-width: 700px) {
+    .parent .container .intro {
+        margin-top: 20px;
+    }
+    .parent .slideshow-container .mySlides .responsive{
+        width: 100%;
+        max-width: 450px;
+        height: 80%;
+    }
+    .parent .slideshow-container .mySlides .text {
+        height:80%;
+        width: 100%;
+    }
+}
+
+@media (max-width: 300px) {
+    .parent .container .intro {
+        margin-top: 20px;
+    }
+    .parent .slideshow-container .mySlides .responsive{
+        width: 100%;
+        max-width: 450px;
+        height: 80%;
+    }
+    .parent .slideshow-container .mySlides .text {
+        height:80%;
+        width: 100%;
+    }
 }
 
 .logo{
@@ -219,56 +276,6 @@ html{
 @keyframes fade{
     from {opacity: 0.4;}
     to{opacity:1}
-}
-
-/*show slide responsiveness*/
-@media(max-width:700px){
-    .mySlides img{
-        height: 28rem;
-    }
-
-}
-/*Styling the container page */
-
-.container{
-    margin-top: 10rem;
-    padding-left: 10px;
-}
-
-.container .intro {
-    width:600px;
-}
-
-.container .intro .box{
-    box-shadow:var(--box-shadow);
-    border-radius: 5px;
-    border: 2px var(--pinky) solid;
-    background-color: rgb(0,0,0);
-    background-color:var(--background);
-}
-
-.container .intro .box p{
-    padding: 15px;
-    font-size: 15px;
-    font-family: 'Quintessential', cursive;
-    color: var(--light-bg);
-    overflow-wrap: break-word;
-    text-align: justify;
-}
-
-.container .intro .box p a{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 5px;
-}
-@media (max-width: 700px) {
-    .container{
-    top: -120px;
-    }
-    .container .intro {
-        width: 300px;
-        top:0;
-        margin-top: 30px;
-    }
 }
 
 /*modal box styling*/
@@ -404,7 +411,8 @@ box-shadow: var(--box-shadow);
     align-self: end;
     width: 100%;
     padding:10px 20px 23px 5px;
-    background: var(--black)
+    background: var(--black);
+    margin-top:20rem;
 }
 
 .down-side .share{
@@ -439,35 +447,17 @@ box-shadow: var(--box-shadow);
     margin-right: 0 ;
 }
 
-/*Service.html styling*/
-.Service-container{
-    transition: 0.5s  ease-out;
-    -webkit-transition: 0.5s  ease-out;
-    -moz-transition: 0.5s  ease-out;
-    -ms-transition: 0.5s  ease-out;
-    -o-transition: 0.5s  ease-out;
-}
-
-.title{
-    font-family: 'Cormorant Upright', serif;
-    font-size: 40px;
-    color: var(--white);
-    padding: 0 0px 0 15px;
-}
-
-@media(min-width:850px) {
-    .box-container1{
-        display: grid;
-        margin: 0;
-        grid-template-columns:repeat(3, minmax(180px, 1fr));
-    }
+/*Service Page styling*/
+.box-container1{
+    perspective: 1000px;
+    cursor: pointer;
 }
 
 .box-container1 .images{
     max-width: 500px;
     margin: 20px;
-    text-align: center;
-    color: var(--black);
+    position: relative;
+   color: var(--black);
     font-size: 20px;
     background: var(--white);
     border-radius: 8px;
@@ -475,10 +465,87 @@ box-shadow: var(--box-shadow);
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
+    transform-style: preserve-3d;
+     transition: transform 3s;
+    -webkit-transition: transform 3s;
+    -moz-transition: transform 3s;
+    -ms-transition: transform 3s;
+    -o-transition: transform 3s;
 }
 
+.box-container1 .images .front-face{
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+}
 
+.flip{
+    position:absolute;
+    margin:20px 350px;
+    cursor: pointer;
+    font-size: 15px;
+    width:70px;
+    padding: 5px;
+    background: none;
+    border: 2px var(--white) solid;
+    color: var(--white);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.box-container1 .images .back-face{
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: var(--white);
+    border-radius: 8px;
+    padding: 30px 40px;
+    top: 0;
+    left: 0;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+    transform: rotateY(180deg);
+    -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
+    -ms-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+}
 
+/*.box-container1:hover .images{
+    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+}*/
+
+.images.active{
+    transform: rotateY(-180deg);
+    -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
+    -ms-transform: rotateY(-180deg);
+    -o-transform: rotateY(-180deg);
+}
+
+.box-container1 .images .back-face h3{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.box-container1 .images .back-face .description{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.card-foot{
+    margin-top: 30px;
+    text-align: center;
+}
 .box-container1 .images .first{
     width: 100%;
     max-width: 500px;
@@ -489,20 +556,17 @@ box-shadow: var(--box-shadow);
     -ms-border-radius: 8px 8px 0 0;
     -o-border-radius: 8px 8px 0 0;
 }
-
-/*.box-container1 .images #myBtn{
-    padding: 5px;
-}*/
-
 .box-container1 .images #myBtn{
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 10px;
     padding-bottom: 15px;
+    margin: 0 10px;
 }
 .box-container1 .images #myBtn a{
     background: var(--pink1);
+    font-size: 20px;
     padding: 10px;
     border-radius: 8px;
     -webkit-border-radius: 8px;
@@ -510,7 +574,6 @@ box-shadow: var(--box-shadow);
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
 }
-
 .box-container1 .images #myBtn a:hover{
     color: var(--light-bg);
     background: var(--tag);
@@ -524,3 +587,78 @@ box-shadow: var(--box-shadow);
     -o-border-radius: 50%;
 }
 
+.title{
+    font-family: 'Cormorant Upright', serif;
+    font-size: 40px;
+    color: var(--white);
+    margin-bottom: 20px;
+    padding: 0 0px 0 15px;
+}
+
+@media(max-width:850px) and (orientation: landscape) {
+    .title{
+        margin-left: 7rem;
+    }
+    .box-container1 .images .first{
+        width: 100%;
+        min-width: 500px;
+        height: 80%;
+    }
+    .box-container1{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 20px;
+        align-content: center;
+        justify-content: center;
+    }
+    .box-container1 .images #myBtn .fab{
+        font-size:10px;
+    }
+}
+
+@media(min-width:850px) {
+
+    .Service-container{
+    transition: 0.5s  ease-out;
+    -webkit-transition: 0.5s  ease-out;
+    -moz-transition: 0.5s  ease-out;
+    -ms-transition: 0.5s  ease-out;
+    -o-transition: 0.5s  ease-out;
+    }
+
+    .box-container1{
+        display: grid;
+        margin: 10px;
+        grid-template-columns:repeat(3, minmax(180px, 1fr));
+        align-content: center;
+        justify-content: center;
+    }
+
+    .box-container1 .images #myBtn .fab{
+        font-size:10px;
+    }
+}
+
+/*Styling About Page*/
+.box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5rem;
+}
+
+.box-container .about p{
+    text-align:justify;
+    color: var(--white);
+    font-family:'Open Sans', sans-serif;
+    font-size: 25px;
+    padding: 10px;
+    line-height: 1.5;
+}
+
+@media (max-width:700px) {
+    .box-container .about p{
+        font-size: 15px;
+        
+    }
+}
