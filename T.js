@@ -32,9 +32,21 @@
         slideIndex++;
         if(slideIndex > slides.length){
             slideIndex = 1;
-        }
-        slides[slideIndex -1].style.display = "block";
-        
+        }else {
+            slides[slideIndex -1].style.display = "block";
+            }
         //changes image every 3 second
         setTimeout(showSlides, 5000);
+    }
+
+
+    var flipCard = document.getElementsByClassName('images')
+
+    for ( i = 0; i < flipCard.length; i++) {
+        var flipButton = flipCard[i]
+
+        flipButton.addEventListener('click', function(event){
+            let buttonClicked = event.target
+            buttonClicked.parentElement.classList.toggle('.active')
+        })
     }
