@@ -20,7 +20,7 @@
 body{
     margin: 0;
     padding: 0;
-    background: url(images/Bground3.jpg);
+    /*background: url(images/Bground3.jpg);*/
     background-position: cover cover;
     background-blend-mode: var(--pinky);
 }
@@ -279,6 +279,9 @@ html{
     to{opacity:1}
 }
 
+.Service-container{
+    z-index: -100;
+}
 /*modal box styling*/
 .modal{
     display: none;
@@ -403,49 +406,6 @@ box-shadow: var(--box-shadow);
         padding: 5px;
         margin: auto;
     }
-}
-/*Footer styling for default device view*/
-.down-side{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1;
-    align-self: end;
-    width: 100%;
-    padding:10px 20px 23px 5px;
-    background: var(--black);
-    margin-top:20rem;
-}
-
-.down-side .share{
-    display:flex;
-    height: 45px;
-}
-
-.down-side .share a{
-    height: 40px;
-    width: 40px;
-    padding: 10px;
-    color: var(--black);
-    font-size: 20px;
-    background: var(--light-color);
-    border-radius: 8px;
-    margin: 10px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    -ms-border-radius: 8px;
-    -o-border-radius: 8px;
-}
-
-.down-side .share a:hover{
-    cursor: pointer;
-    opacity: 1;
-}
-
-.down-side .developer{
-    align-self: end;
-    color:var(--white);
-    padding: 30px 0 30px 30px;
-    margin-right: 0 ;
 }
 
 /*Service Page styling*/
@@ -640,6 +600,7 @@ box-shadow: var(--box-shadow);
 
 }
 
+
 @media(min-width:850px) {
 
     .Service-container{
@@ -664,6 +625,60 @@ box-shadow: var(--box-shadow);
 
 }
 
+/*Place Order Page*/
+.order-container{
+    background-color: var(--white);
+    position:absolute;
+    top:0;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-container .orderList{
+    /*background: var(--black);*/
+    width: 360px;
+    /*display: flex;
+    flex-direction: column;*/
+    padding: 4rem 2rem;
+    color: var(--black);
+    font-size: 20px;
+}
+
+.order-container .orderList .tab{
+    position: relative;
+    height: 48px;
+    margin-bottom: 1.5rem;
+    color:black;
+}
+
+.order-container .orderList .tab .form-input{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color:var(--black);
+    font-size: 25px;
+    padding: 1rem;
+    outline: none;
+    z-index: 1;
+}
+.order-container .orderList .tab .field-label{
+    position: absolute;
+    left: 1rem;
+    top: 1.25rem;
+    padding: 0 0.5rem;
+    color: var(--black);
+    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms;
+    -webkit-transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms;
+    -moz-transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms;
+    -ms-transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms;
+    -o-transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms;
+}
 /*Styling About Page*/
 .box-container{
     display: flex;
@@ -684,6 +699,49 @@ box-shadow: var(--box-shadow);
 @media (max-width:700px) {
     .box-container .about p{
         font-size: 15px;
-        
     }
+}
+
+/*Footer styling for default device view*/
+.down-side{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1;
+    align-self: end;
+    width: 100%;
+    padding:10px 20px 23px 5px;
+    background: var(--black);
+    margin-top:20rem;
+}
+
+.down-side .share{
+    display:flex;
+    height: 45px;
+}
+
+.down-side .share a{
+    height: 40px;
+    width: 40px;
+    padding: 10px;
+    color: var(--black);
+    font-size: 20px;
+    background: var(--light-color);
+    border-radius: 8px;
+    margin: 10px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+
+.down-side .share a:hover{
+    cursor: pointer;
+    opacity: 1;
+}
+
+.down-side .developer{
+    align-self: end;
+    color:var(--white);
+    padding: 30px 0 30px 30px;
+    margin-right: 0 ;
 }
