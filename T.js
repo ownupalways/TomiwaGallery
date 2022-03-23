@@ -47,6 +47,6 @@
 
         flipButton.addEventListener('click', function(event){
             let buttonClicked = event.target
-            buttonClicked.parentElement.classList.toggle('.active')
+            buttonClicked.parentElement.parentElement.classList.toggle('active')
         })
     }

@@ -32,7 +32,7 @@ html{
 
 :root{
     --black:rgb(8, 8, 8);
-    --background:rgba(7, 6, 6, 0.6);
+    --background:rgba(7, 6, 6, 0.2);
     --white:#fff;
     --tag:rgba(10, 10, 10, 0.5);
     --blue:blue;
@@ -209,6 +209,7 @@ html{
     position: absolute;
     top: 0;
     color: var(--light-bg);
+    text-decoration: underline;
     font-size: 50px;
     height:100%;
     width: 100%;
@@ -449,7 +450,7 @@ box-shadow: var(--box-shadow);
 
 /*Service Page styling*/
 .box-container1{
-    perspective: 1000px;
+    perspective: 8000px;
     cursor: pointer;
 }
 
@@ -457,7 +458,7 @@ box-shadow: var(--box-shadow);
     max-width: 500px;
     margin: 20px;
     position: relative;
-   color: var(--black);
+    color: var(--black);
     font-size: 20px;
     background: var(--white);
     border-radius: 8px;
@@ -473,12 +474,12 @@ box-shadow: var(--box-shadow);
     -o-transition: transform 3s;
 }
 
-.box-container1 .images .front-face{
+.box-container1 .images .front{
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 }
 
-.box-container1 .images .front-face .flip{
+.box-container1 .images .front .flip{
     position:absolute;
     margin: 2rem;
     cursor: pointer;
@@ -495,13 +496,38 @@ box-shadow: var(--box-shadow);
     -o-border-radius: 5px;
 }
 
-.box-container1 .images .back-face{
+.box-container1 .images .back .flip{
+    margin: .1rem;
+    cursor: pointer;
+    font-size: 15px;
+    width:75px;
+    padding: 5px;
+    background: none;
+    border: 2px var(--black) solid;
+    color: var(--black);
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.box-container1 .images .back .flip:hover{
+    background: var(--black);
+    color: var(--white);
+    transition:.5s ease-in;
+    -webkit-transition:.5s ease-in;
+    -moz-transition:.5s ease-in;
+    -ms-transition:.5s ease-in;
+    -o-transition:.5s ease-in;
+}
+.box-container1 .images .back{
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     position: absolute;
     height: 100%;
     width: 100%;
     background-color: var(--white);
+    color: var(--black);
     border-radius: 8px;
     padding: 30px 40px;
     top: 0;
@@ -517,14 +543,6 @@ box-shadow: var(--box-shadow);
     -o-transform: rotateY(180deg);
 }
 
-/*.box-container1:hover .images{
-    transform: rotateY(-180deg);
-    -webkit-transform: rotateY(-180deg);
-    -moz-transform: rotateY(-180deg);
-    -ms-transform: rotateY(-180deg);
-    -o-transform: rotateY(-180deg);
-}*/
-
 .images.active{
     transform: rotateY(-180deg);
     -webkit-transform: rotateY(-180deg);
@@ -533,12 +551,12 @@ box-shadow: var(--box-shadow);
     -o-transform: rotateY(-180deg);
 }
 
-.box-container1 .images .back-face h3{
+.box-container1 .images .back h3{
     margin-top: 20px;
     text-align: center;
 }
 
-.box-container1 .images .back-face .description{
+.box-container1 .images .back .description{
     margin-top: 20px;
     text-align: center;
 }
