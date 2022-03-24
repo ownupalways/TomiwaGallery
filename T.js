@@ -22,7 +22,7 @@
 
     showSlides();
 
-    function showSlides(){
+    function showSlides() {
         var i;
         var slides = document.getElementsByClassName("mySlides");
         for(i = 0; i < slides.length; i++){
@@ -30,13 +30,13 @@
         }
 
         slideIndex++;
-        if(slideIndex > slides.length){
-            slideIndex = 1;
-        }else {
-            slides[slideIndex -1].style.display = "block";
+        if(slideIndex >= slides.length){
+            slideIndex = 0;
+        }else{
+            slides[slideIndex].style.display = "block";
             }
         //changes image every 3 second
-        setTimeout(showSlides, 5000);
+        setTimeout(showSlides, 3000);
     }
 
 

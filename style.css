@@ -40,10 +40,12 @@ html{
     --pink1:rgba(123, 73, 123, 0.5);
     --box-shadow:0 5px 10px rgba(0,0,0.1);
     --box-shadow2:0 5px 10px hsl(0, 1%, 73%);
+    --card-box-shadow: 0 10px 25px rgba(92,99,105,0.5);
     --light-color:hsla(166, 17%, 85%, 0.993);
     --light-bg:#eee;
     --purple:purple;
     --contact:rgba(8, 176, 206, 0.9);
+    --submit-btn:lightgreen;
 }
 
 /*Styling navigation bar Menu*/
@@ -415,12 +417,14 @@ box-shadow: var(--box-shadow);
 }
 
 .box-container1 .images{
-    max-width: 500px;
-    margin: 20px;
     position: relative;
+    max-width: 500px;
+    height:fit-content;
+    margin:20px;
     color: var(--black);
     font-size: 20px;
     background: var(--white);
+    box-shadow: var(--card-box-shadow);
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
@@ -434,6 +438,10 @@ box-shadow: var(--box-shadow);
     -o-transition: transform 3s;
 }
 
+.box-container1 .image-title{
+    padding-bottom: 2rem;
+}
+
 .box-container1 .images .front{
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -443,8 +451,8 @@ box-shadow: var(--box-shadow);
     position:absolute;
     margin: 2rem;
     cursor: pointer;
-    font-size: 15px;
-    width:70px;
+    font-size: 10px;
+    width:75px;
     padding: 5px;
     background: none;
     border: 2px var(--white) solid;
@@ -459,9 +467,9 @@ box-shadow: var(--box-shadow);
 .box-container1 .images .back .flip{
     margin: .1rem;
     cursor: pointer;
-    font-size: 15px;
+    font-size: 10px;
     width:75px;
-    padding: 5px;
+    padding: .2rem;
     background: none;
     border: 2px var(--black) solid;
     color: var(--black);
@@ -486,10 +494,11 @@ box-shadow: var(--box-shadow);
     position: absolute;
     height: 100%;
     width: 100%;
+    font-size: 18px;
     background-color: var(--white);
     color: var(--black);
     border-radius: 8px;
-    padding: 30px 40px;
+    padding: 2rem 3rem; 
     top: 0;
     left: 0;
     -webkit-border-radius: 8px;
@@ -501,6 +510,38 @@ box-shadow: var(--box-shadow);
     -moz-transform: rotateY(180deg);
     -ms-transform: rotateY(180deg);
     -o-transform: rotateY(180deg);
+}
+
+@media(max-width:700px){
+    .box-container1 .images .back{
+    font-size: 15px;
+    }
+
+    .back .place-Order{
+        width:100px;
+        padding: .5rem;
+        margin: 4rem 6rem;
+    }
+}
+.place-Order{
+    padding: 1rem;
+    font-size: 15px;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    background-color: blueviolet;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+.place-Order:hover{
+    background-color:var(--purple) ;
+}
+
+.place-Order a{
+    color: var(--white);
 }
 
 .images.active{
@@ -528,7 +569,7 @@ box-shadow: var(--box-shadow);
 .box-container1 .images .first{
     width: 100%;
     max-width: 500px;
-    height: 80%;
+    height: 445px;
     border-radius: 8px 8px 0 0;
     -webkit-border-radius: 8px 8px 0 0;
     -moz-border-radius: 8px 8px 0 0;
@@ -636,9 +677,9 @@ box-shadow: var(--box-shadow);
 
 .orderList{
     width: 360px;
-    padding: 4rem 2rem;
+    padding:2rem;
     border-radius: 1rem;
-    box-shadow: 0 10px 25px rgba(92,99,105,0.2);
+    box-shadow: var(--card-box-shadow);
     -webkit-border-radius: 1rem;
     -moz-border-radius: 1rem;
     -ms-border-radius: 1rem;
@@ -647,8 +688,8 @@ box-shadow: var(--box-shadow);
 
 .tab{
     position: relative;
-    height: 48px;
-    margin-bottom: 1.5rem;
+    height: 42px;
+    margin-bottom: 1.2rem;
     top: 0;
 }
 
@@ -669,6 +710,22 @@ box-shadow: var(--box-shadow);
     -moz-border-radius: .5rem;
     -ms-border-radius: .5rem;
     -o-border-radius: .5rem;
+}
+.submit-order{
+    padding: 1rem;
+    border-radius: .5rem;
+    border: none;
+    outline: none;
+    background-color: #888;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+}
+.submit-order:hover{
+    background-color: var(--submit-btn);
+    color: var(--white);
+    font-size: 600;
 }
 .field-label{
     position: absolute;
