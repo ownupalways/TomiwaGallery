@@ -27,7 +27,6 @@ body{
 
 html{
     font-size: 62.5%;
-    scroll-behavior: smooth;
 }
 
 :root{
@@ -60,7 +59,7 @@ html{
 
 .navbar .nav-link{
     float: right;
-    z-index: 1100;
+    z-index: 1000;
 }
 
 .navbar .nav-link a{
@@ -280,7 +279,8 @@ html{
 }
 
 .Service-container{
-    z-index: -100;
+    width: 100%;
+    height: 100vh;
 }
 /*modal box styling*/
 .modal{
@@ -627,69 +627,82 @@ box-shadow: var(--box-shadow);
 
 /*Place Order Page*/
 .order-container{
-    background-color: var(--white);
-    position:absolute;
-    top:0;
-    bottom: 0;
-    width: 100%;
-    height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: var(--white);
 }
 
-.order-container .orderList{
-    /*background: var(--black);*/
+.orderList{
     width: 360px;
-    /*display: flex;
-    flex-direction: column;*/
     padding: 4rem 2rem;
-    color: var(--black);
-    font-size: 20px;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(92,99,105,0.2);
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
 }
 
-.order-container .orderList .tab{
+.tab{
     position: relative;
     height: 48px;
     margin-bottom: 1.5rem;
-    color:black;
+    top: 0;
 }
 
-.order-container .orderList .tab .form-input{
+.form__input{
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    color:var(--black);
-    font-size: 25px;
-    padding: 1rem;
+    font-size: 1.5rem;
+    border: 1px solid var(--black);
     outline: none;
+    padding: .5rem;
+    background: none;
     z-index: 1;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
 }
-.order-container .orderList .tab .field-label{
+.field-label{
     position: absolute;
-    left: 1rem;
-    top: 1.25rem;
-    padding: 0 0.5rem;
+    left:1.8rem;
+    top: 1.5rem;
+    font-size: 1.3rem;
+    padding: 0 .25rem;
+    background-color: var(--white);
     color: var(--black);
-    transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms;
-    -webkit-transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms;
-    -moz-transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms;
-    -ms-transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms;
-    -o-transition: top 200ms ease-in, left 200ms ease-in, font-size 200ms;
+    transition: .3s;
 }
-/*Styling About Page*/
-.box-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 5rem;
+.form__input:focus ~ .field-label, .form__input:not(:placeholder-shown).form__input:not(:focus)~.field-label{
+    top: -.5rem;
+    left: .8rem;
+    font-size: 1rem;
+    font-weight: 500;
+    z-index: 10;
 }
 
+.form__input:focus{
+    border: 2px solid var(--pinky);
+}
+/*Styling About Page*/
+.box-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5rem;
+}
 .box-container .about p{
     text-align:justify;
-    color: var(--white);
+    color: var(--black);
     font-family:'Open Sans', sans-serif;
     font-size: 25px;
     padding: 10px;
@@ -703,15 +716,12 @@ box-shadow: var(--box-shadow);
 }
 
 /*Footer styling for default device view*/
-.down-side{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1;
-    align-self: end;
+.foot{
+    display:block;
     width: 100%;
+    bottom: 0;
     padding:10px 20px 23px 5px;
     background: var(--black);
-    margin-top:20rem;
 }
 
 .down-side .share{
