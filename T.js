@@ -30,10 +30,10 @@
         }
 
         slideIndex++;
-        if(slideIndex >= slides.length){
+        if(slideIndex > slides.length){
             slideIndex = 0;
         }else{
-            slides[slideIndex].style.display = "block";
+            slides[slideIndex +1].style.display = "block";
             }
         //changes image every 3 second
         setTimeout(showSlides, 3000);
@@ -50,3 +50,10 @@
             buttonClicked.parentElement.parentElement.classList.toggle('active')
         })
     }
+
+    var Login = document.getElementsByClassName("login-account")
+    var NewUser = document.getElementsByClassName("new-account")
+    Login.addEventListener('click', function (event) {
+        let NewAccountClicked = event.target
+        NewAccountClicked.parentElement.classList.add(changeOtherSide)
+    })

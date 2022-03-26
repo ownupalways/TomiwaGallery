@@ -82,6 +82,33 @@ html{
     display: none;
 }
 
+.navbar .icon {
+    display: flex;
+    position: absolute;
+    align-items: center;
+    margin-left: 2rem;
+    gap: 10px;
+    top:5px;
+}
+.navbar .icon div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4rem;
+    width: 4rem;
+    line-height: 1rem;
+    padding: 10px;
+    background:var(--background);
+    color:var(--white);
+    font-size: 2.8rem;
+    text-align: center;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+}
+
 @media (max-width: 700px) {
 
     .navbar{
@@ -255,6 +282,27 @@ html{
     }
 }
 
+.login{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    top: 10%;
+    right: 2rem;
+    width: 30rem;
+    padding: 2rem;
+    text-align: center;
+    border-radius: .5rem;
+    -webkit-border-radius: .5rem;
+    -moz-border-radius: .5rem;
+    -ms-border-radius: .5rem;
+    -o-border-radius: .5rem;
+    overflow: hidden;
+}
+.login.changeOtherSide{
+
+}
 .logo{
     color: var(--white);
     font-size: 20px;
