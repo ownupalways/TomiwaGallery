@@ -45,29 +45,36 @@
 
         <div class="icon">
             <div class="fas fa-search" id="search-btn"></div>
-            <div class="fas fa-user" id="user-btn"></div>
+            <div class="fas fa-user" id="user-btn" onclick="user()"></div>
             <div class="fas fa-user-secret" id="secret-btn"></div>
         </div>
-        <form action="" class="login">
-            <h1>Login Now</h1>
-            <input type="email">
-            <input type="password">
-            <input type="submit">
-            <p>Forget Password?<a href="" class="forget">Click Here</a></p>
-            <p>Register to See More<a href="" class="login-account">New Fan</a></p>
-        </form>
-        <form action="" class="login">
-            <h1>Register</h1>
-            <input type="text" placeholder="Name">
-            <input type="text" placeholder="State">
-            <input type="email" placeholder="Email">
-            <input type="Password" placeholder="Password">
-            <input type="number" placeholder="Phone">
-            <input type="text" placeholder="State">
-            <input type="submit" value="Register">
-            <p>Forget Password? <a href="" class="forget">Click Here</a></p>
-            <p>Register to See More <a href="" class="new-account">New Fan</a></p>
-        </form>
+        <div class="form-modal" id="formModalPage">
+            <span id="closeAccount" onclick="close()">&times;</span>
+            <div class="LoginPage form">
+                <form action="" class="login">
+                    <h1>Login Now</h1>
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <input type="submit">
+                    <p>Forget Password?<a href="" class="forget">Click Here</a></p>
+                    <p>Register to See More<a class="login-account">New Fan</a></p>
+                </form>
+            </div>
+            <div class="registerPage form">
+                <form action="" class="register">
+                    <h1>Register</h1>
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="State">
+                    <input type="email" placeholder="Email">
+                    <input type="Password" placeholder="Password">
+                    <input type="number" placeholder="Phone">
+                    <input type="text" placeholder="State">
+                    <input type="submit" value="Register">
+                    <p>Forget Password? <a href="" class="forget">Click Here</a></p>
+                    <p>Register to See More <a class="newAccount"> New Fan</a></p>
+                </form>
+            </div>
+        </div>
     </div>
 
     <!--Automatic Slideshow of images-->
