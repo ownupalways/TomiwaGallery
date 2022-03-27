@@ -70,7 +70,7 @@
         if(slideIndex > slides.length){
             slideIndex = 0;
         }else{
-            slides[slideIndex -1].style.display = "block";
+            slides[slideIndex].style.display = "block";
             }
         //changes image every 3 second
         setTimeout(showSlides, 3000);
