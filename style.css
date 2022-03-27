@@ -288,8 +288,17 @@ html{
         height: calc(100vh - 120px);
         overflow-y: auto;
     }
-}
 
+        .navbar .icon div{
+        height: 3rem;
+        width: 3rem;
+        line-height: 1rem;
+        padding: 10px;
+        font-size: 15px;
+        position: relative;
+        top: 5px;
+    }
+}
 /*Login and Registration page responsiveness*/
 
 @media (max-width:700px){

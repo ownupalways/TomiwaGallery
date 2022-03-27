@@ -7,17 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creativity|Art|Design</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="">
     <script src="T.js" defer></script>
     <!--font awesome cdnjs link-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
     <div class="navbar">
-        <!--<div class="logo-space">
-            <img src="images/" class="first">
-        </div>-->
+        <div class="logo-space">
+            <img src="images/" alt="">
+        </div>
 
         <!--responsive navbar toggle button-->
         <input type="checkbox" id="nav-check">
@@ -33,14 +33,48 @@
             <a href="index.html">Home</a>
             <a href="About.html">About</a>
             <a href="Service.html">Service</a>
+            <a href="Order.html">Order</a>
             <!-- <a href="Training.html">Training</a>
-            <a href="Sales.html">Sales</a>-->
+             <a href="Sales.html">Sales</a>-->
             <a id="myBtn">Contact</a>
         </div>
 
-        <!--<div class="night-mode">
-            <img src="images/" class="first">
-        </div>-->
+        <div class="night-mode">
+            <img src="images/" alt="">
+        </div>
+
+        <div class="icon">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-user" id="user-btn" onclick="user()"></div>
+            <div class="fas fa-user-secret" id="secret-btn"></div>
+        </div>
+        <div class="form-modal" id="formModalPage">
+            <span id="closeAccount" onclick="close()">&times;</span>
+            <div class="LoginPage form">
+                <form action="" class="login">
+                    <h1>Login Now</h1>
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <input type="submit">
+                    <p>Forget Password?<a href="" class="forget">Click Here</a></p>
+                    <p>Register to See More<a class="login-account">New Fan</a></p>
+                </form>
+            </div>
+            <div class="registerPage form">
+                <form action="" class="register">
+                    <h1>Register</h1>
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="State">
+                    <input type="email" placeholder="Email">
+                    <input type="Password" placeholder="Password">
+                    <input type="number" placeholder="Phone">
+                    <input type="text" placeholder="State">
+                    <input type="submit" value="Register">
+                    <p>Forget Password? <a href="" class="forget">Click Here</a></p>
+                    <p>Register to See More <a class="newAccount"> New Fan</a></p>
+                </form>
+            </div>
+        </div>
     </div>
     <div class="Service-container">
         <h3 class="title">Cakes</h3>

@@ -22,22 +22,13 @@
     var  UserAccountBtn = document.getElementById("user-btn")
     var UserAccountCloseBtn = document.getElementById("closeAccount")
 
-    /*UserAccountBtn.onclick = () => {
-        UserAccountModal.style.display = "flex"
-    }*/
-
     function user(){
-        UserAccountModal.style.display = "flex"
+        document.getElementById("formModalPage").style.display = "flex"
     }
 
-    function close(event){
-        if(event.target == UserAccountModal){
-            UserAccountModal.style.display = "none"
-        }
-    }
-    /*UserAccountCloseBtn.onclick = () => {
+    UserAccountCloseBtn.onclick = () => {
         UserAccountModal.style.display = "none"
-    }*/
+    }
 
     window.onclick = (event) => {
         if (event.target == UserAccountModal) {
