@@ -38,40 +38,41 @@
 
     //Switching Login and Register Pages
 
-    var newAccount = document.getElementsByClassName('registerPage')
-    var loginAccount = document.getElementsByClassName('LoginPage')
+    let loginAccount = document.getElementsByClassName("LoginPage")
+    let registerAccount = document.getElementsByClassName("registerPage")
 
     document.getElementsByClassName('newAccount').onclick = () =>{
-        console.log("clicked")
-        loginAccount.classList.remove('active')
-        newAccount.classList.toggle('active')
+        registerAccount.classList.toggle('active')
     }
 
     document.getElementsByClassName('login-account').onclick = () =>{
-        console.log("clicked")
+        console.log('clicked')
         newAccount.classList.toggle('active')
         loginAccount.classList.remove('active')
     }
 
     //slide automation
 
-    var slideIndex = 0;
+    let slideIndex = 0;
 
     showSlides();
 
     function showSlides() {
-        var i;
-        var slides = document.getElementsByClassName("mySlides");
-        for(i = 0; i < slides.length; i++){
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+
+        for(i = 0; i < slides.length; i++) {
+
             slides[i].style.display ="none";
         }
 
         slideIndex++;
+
         if(slideIndex > slides.length){
-            slideIndex = 0;
-        }else{
-            slides[slideIndex].style.display = "block";
-            }
+            slideIndex = 1;
+        }
+            slides[slideIndex -1].style.display = "flex";
+            
         //changes image every 3 second
         setTimeout(showSlides, 3000);
     }
@@ -87,4 +88,6 @@
             buttonClicked.parentElement.parentElement.classList.toggle('rotated')
         })
     }
+
+    
 
