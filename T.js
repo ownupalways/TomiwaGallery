@@ -38,19 +38,10 @@
 
     //Switching Login and Register Pages
 
-    let loginAccount = document.getElementsByClassName("LoginPage")
-    let registerAccount = document.getElementsByClassName("registerPage")
+    let loginAccount = document.getElementsByClassName("existingAccount")
+    let registerAccount = document.getElementsByClassName("newAccount")
 
-    document.getElementsByClassName('newAccount').onclick = () =>{
-        registerAccount.classList.toggle('active')
-    }
-
-    document.getElementsByClassName('login-account').onclick = () =>{
-        console.log('clicked')
-        newAccount.classList.toggle('active')
-        loginAccount.classList.remove('active')
-    }
-
+    console.log(loginAccount)
     //slide automation
 
     let slideIndex = 0;
@@ -70,8 +61,9 @@
 
         if(slideIndex > slides.length){
             slideIndex = 1;
-        }
-            slides[slideIndex -1].style.display = "flex";
+        }else {
+                slides[slideIndex -1].style.display = "block";
+            }
             
         //changes image every 3 second
         setTimeout(showSlides, 3000);
