@@ -284,6 +284,10 @@ html{
         overflow-y: auto;
     }
 
+    .navbar .icon{
+        gap: 10px;
+        margin-right:.5 ;
+    }
     .navbar .icon div{
         height: 3rem;
         width: 3rem;
