@@ -288,6 +288,7 @@ html{
         height: 3rem;
         width: 3rem;
         gap: 10px;
+        line-height: 3;
         padding: 10px;
         font-size: 15px;
         position: relative;
