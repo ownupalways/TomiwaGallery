@@ -286,7 +286,7 @@ html{
 
     .navbar .icon{
         gap: 10px;
-        margin-right:.5 ;
+        margin-right:.5rem;
     }
     .navbar .icon div{
         height: 3rem;
@@ -306,7 +306,7 @@ html{
     align-items: center;
     justify-content: center;
     width: 100%;
-    margin-top:28px;
+    margin-top:0;
     height: 138vh;
     }
 
