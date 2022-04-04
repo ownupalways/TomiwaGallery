@@ -664,6 +664,7 @@ box-shadow: var(--box-shadow);
 .box-container1{
     display: flex;
     flex-wrap: wrap;
+    user-select: none;
     width:100%;
     margin:1rem 27rem ;
     perspective: 8000px;
@@ -789,6 +790,7 @@ box-shadow: var(--box-shadow);
     padding: .5rem;
     border: none;
     outline: none;
+    width: 200px;
     text-decoration: none;
     background-color: blueviolet;
     border-radius: 3px;
@@ -797,32 +799,17 @@ box-shadow: var(--box-shadow);
     -ms-border-radius: 3px;
     -o-border-radius: 3px;
 }
-.back .place-Order{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: .7rem;
-    margin-left: 7rem;
-    border: none;
-    outline: none;
-    text-decoration: none;
-    background-color: blueviolet;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-}
+
 .place-Order:hover{
     background-color:var(--purple) ;
 }
 
 .place-Order a{
     color: var(--white);
-    font-size: 10px;
+    font-size: 12px;
 }
 
-.images.rotated{
+.rotated{
     transform: rotateY(-180deg);
     -webkit-transform: rotateY(-180deg);
     -moz-transform: rotateY(-180deg);
@@ -873,7 +860,6 @@ hr{
     .back .place-Order{
         max-width:100px;
         padding: .5rem;
-        margin: 4rem 6rem;
     }
 }
 @media(max-width:850px) {
@@ -934,14 +920,14 @@ hr{
     }
 
     .box-container1 .images{
-        max-width: 350px;
-        height:250px;
-        margin:3rem 3rem 3rem 10rem;
+        max-width: 240px;
+        height:330px;
+        margin:3rem 3rem 0 10rem;
     }
 
     .box-container1 .images .first{
         max-width: 240px;
-        height:200px;
+        height:270px;
     }
     
     .box-container1 .images .front .flip{
@@ -961,8 +947,8 @@ hr{
         position: absolute;
         left: 2%;
         cursor: pointer;
-        font-size: 8px;
-        width:50px;
+        font-size: 11px;
+        width:65px;
         padding: 1.5px;
         border-radius: 3px;
         -webkit-border-radius: 3px;
@@ -974,7 +960,6 @@ hr{
     .box-container1 .images .back{
         height: 230px;
         width: 100%;
-        font-size: 10px;
         padding: 0 2rem; 
     }
 
@@ -982,28 +967,17 @@ hr{
         margin-top: 25px;
         font-size: 12px;
     }
-    .box-container1 .images .front .image-title{
-        text-align: center;
-        font-size: 10px;
-        line-height: 1.8;
-    }
+
     .box-container1 .images .back .image-title{
-        text-align: center;
-        font-size: 10px;
-        padding-bottom: 20px;
-    }
-    .box-container1 .images .back .image-title .place-Order{
         display: flex;
-        justify-content: center;
         align-items: center;
-        margin:0 2.2rem;
+        justify-content: center;
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
     }
 
-    .place-Order{
-        padding: 2px;
-        width: 68px;
-        font-size: 12px;
-    }
+    
 }
 
 
