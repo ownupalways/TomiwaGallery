@@ -906,9 +906,9 @@ hr{
     }
 
 }
-@media(max-width:300px){
+@media(max-width:500px){
     .Service-container{
-        width: 100%;
+        max-width: 250px;
         height: 100vh;
         z-index: -1;
     }
@@ -924,6 +924,7 @@ hr{
     .box-container1{
         display: flex;
         flex-wrap: wrap;
+        max-width: 250px;
         padding: 0;
         margin: 0;
     }
