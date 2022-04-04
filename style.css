@@ -919,6 +919,7 @@ hr{
     .box-container1{
         display: flex;
         flex-wrap: wrap;
+        width: 100%;
         margin: 0;
     }
 
