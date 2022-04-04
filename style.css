@@ -908,14 +908,14 @@ hr{
 }
 @media(max-width:500px){
     .Service-container{
-        max-width: 250px;
+        max-width: 500px;
         height: 100vh;
         z-index: -1;
     }
     .title{
         font-size: 25px;
-        margin-top: 15px;
-        padding: 0 0px 0 13px;
+        margin-top: 1px;
+        padding: 0 0 0 11px;
     }
     hr{
         margin: 0 12px;
@@ -924,20 +924,21 @@ hr{
     .box-container1{
         display: flex;
         flex-wrap: wrap;
-        max-width: 250px;
+        width: 100%;
         padding: 0;
         margin: 0;
     }
 
     .box-container1 .images{
-        max-width: 120px;
-        height:190px;
-        margin-right: 10rem;
+        max-width: 350px;
+        height:250px;
+        margin:3rem 3rem 3rem 12rem;
+        
     }
 
     .box-container1 .images .first{
-        max-width: 120px;
-        height:140px;
+        max-width: 240px;
+        height:200px;
     }
     
     .box-container1 .images .front .flip{
