@@ -55,7 +55,7 @@ html{
 
 .navbar{
     height: 80px;
-    padding-bottom: 10px;
+    padding: 0;
     width: 100%;
     background: var(--purple);
     z-index: 1000;
@@ -63,21 +63,22 @@ html{
 }
 
 .navbar .nav-link{
-    float: right;
-    z-index: 1000;
+    display: flex;
+    position: relative;
+    justify-content: flex-end;
 }
 
 .navbar .nav-link a{
     position: relative;
-    top: 12px;
     padding: 10px;
-    margin-right: 30px;
+    margin-right: 10px;
     font-size: 22px;
     font-family: 'Cormorant Upright', serif;
     color: var(--white);
 }
 
 .navbar .nav-link a:hover{
+    background-color: beige;
     color:aqua;
 }
 
@@ -86,14 +87,58 @@ html{
 .navbar #nav-check, .navbar .nav-btn{
     display: none;
 }
+
+/*DropDown Element*/
+.dropBtn{
+    padding:10px;
+    background-color: transparent;
+    border: none;
+    margin-right: 10px;
+    font-size: 22px;
+    font-family: 'Cormorant Upright', serif;
+    color: var(--white);
+}
+.dropdown{
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    background-color:var(--pink) ;
+    box-shadow: var(--card-box-shadow);
+    z-index: 1200;
+}
+
+.dropdown-content a{
+    color:var(--white);
+    width: 100%;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover{
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.dropdown:hover .dropBtn{
+    background-color: var(--light-color);
+}
 /*Buttons for Forms and User Private page*/
 .navbar .icon {
     display: flex;
+    top: 0;
+    left: 0;
     position: absolute;
-    align-items: center;
-    margin-left: .5rem;
+    margin-left: .8rem;
     gap: 10px;
-    top:5px;
 }
 .navbar .icon div{
     display: flex;
@@ -285,6 +330,10 @@ html{
     }
 
     .navbar .icon{
+        position: absolute;
+        top: 0;
+        display: flex;
+        justify-content: flex-start;
         gap: 10px;
         margin-right:.5rem;
     }
@@ -297,6 +346,37 @@ html{
         position: relative;
         top: 5px;
     }
+    .dropBtn{
+        font-weight: bolder;
+    }
+    .dropdown{
+        margin-left: 20px;
+        position: relative;
+        display: block;
+    }
+
+    .dropdown-content{
+        display: none;
+        position: absolute;
+        min-width: 160px;
+        background-color:var(--pink) ;
+        box-shadow: var(--card-box-shadow);
+    }
+
+    .dropdown-content a{
+        color:var(--white);
+        width: 100%;
+        display: block;
+
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover{
+        background-color: var(--white);
+        color: var(--black);
+    }
+
 }
 /*Login and Registration page responsiveness*/
 
@@ -521,7 +601,7 @@ html{
 
 .Service-container{
     width: 100%;
-    height: 420vh;
+    height: 100%;
 }
 
 /*modal box styling*/
@@ -664,9 +744,10 @@ box-shadow: var(--box-shadow);
 .box-container1{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    margin:2rem 10rem;
     user-select: none;
     width:100%;
-    margin:1rem 27rem ;
     perspective: 8000px;
     cursor: pointer;
 }
@@ -846,7 +927,7 @@ box-shadow: var(--box-shadow);
     font-family: 'Cormorant Upright', serif;
     font-size: 40px;
     color: var(--black);
-    margin-bottom: 5px;
+    margin-top: 3rem;
     padding: 0 0px 0 35px;
 }
 hr{
@@ -874,11 +955,10 @@ hr{
     .Service-container{
         width: 100%;
         height: 100vh;
-        z-index: -1;
     }
     
     .title{
-        padding: 0 0px 0 25px;
+        padding: 0 0 0 25px;
     }
     hr{
         margin: 0 25px;
