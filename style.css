@@ -325,7 +325,7 @@ html{
 
    /*when nav toggle button is checked*/
     .navbar #nav-check:checked ~ .nav-link{
-        height: calc(100vh - 120px);
+        height: calc(100vh - 60px);
         overflow-y: auto;
     }
 
@@ -356,20 +356,14 @@ html{
     }
 
     .dropdown-content{
-        display: none;
-        position: absolute;
-        min-width: 160px;
-        background-color:var(--pink) ;
-        box-shadow: var(--card-box-shadow);
+        
     }
 
     .dropdown-content a{
         color:var(--white);
         width: 100%;
-        display: block;
-
         text-decoration: none;
-        display: block;
+        display: inline-block;
     }
 
     .dropdown-content a:hover{
@@ -745,7 +739,7 @@ box-shadow: var(--box-shadow);
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin:2rem 10rem;
+    margin:1rem 0 2rem 0;
     user-select: none;
     width:100%;
     perspective: 8000px;
@@ -977,6 +971,9 @@ hr{
 
 }
 @media(max-width:500px){
+        .navbar .icon {
+        margin-top: 0.8rem;
+    }
     .Service-container{
         max-width: 500px;
         height: 100vh;
@@ -984,7 +981,7 @@ hr{
     }
     .title{
         font-size: 25px;
-        margin-top: 1px;
+        margin-top: 1rem;
         padding: 0 0 0 11px;
     }
     hr{
@@ -992,8 +989,6 @@ hr{
     }
 
     .box-container1{
-        display: flex;
-        flex-wrap: wrap;
         width: 100%;
         padding: 0;
         margin: 0;
@@ -1056,8 +1051,6 @@ hr{
         gap: 15px;
         text-align: center;
     }
-
-    
 }
 
 
