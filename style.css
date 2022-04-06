@@ -41,9 +41,10 @@ html{
     --pinky:hotpink;
     --pink:rgba(123, 73, 123, 0.9);
     --pink1:rgba(123, 73, 123, 0.5);
+    --pink2:rgba(123, 73, 123, 0.2);
     --box-shadow:0 5px 10px rgba(0,0,0.1);
     --box-shadow2:0 5px 10px hsl(0, 1%, 73%);
-    --card-box-shadow: 0 10px 25px rgba(92,99,105,0.5);
+    --card-box-shadow: 0 10px 15px 5px rgba(92, 99, 105, 0.5);
     --light-color:hsla(166, 17%, 85%, 0.993);
     --light-bg:#eee;
     --purple:purple;
@@ -355,9 +356,6 @@ html{
         display: block;
     }
 
-    .dropdown-content{
-        
-    }
 
     .dropdown-content a{
         color:var(--white);
@@ -376,12 +374,12 @@ html{
 
 @media (max-width:700px){
     .form-modal{
-    display:none;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    margin-top:0;
-    height: 138vh;
+        display:none;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin-top:0;
+        height: 138vh;
     }
 
     .form-modal #closeAccount{
@@ -442,45 +440,69 @@ html{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    margin: 5rem;
-    gap: 20px;
-    height: 100vh;
+    position: absolute;
+    top: 0px;
+    left: 15rem;
+    gap: 10px;
+    height: 110vh;
+    margin: 0 15px;
 }
 
-.parent .container{
+.parent .box{
     max-width: 500px;
-}
-
-.parent .container .intro .box{
-    box-shadow:var(--box-shadow);
-    border-radius: 5px;
-    /*border: 2px var(--pinky) solid;*/
-    background-color: rgb(0,0,0);
-    background-color:var(--background);
-}
-.parent .container .intro .box p{
-    padding: 15px;
-    font-size: 15px;
+    max-height: 530px;
+    font-size: 18px;
+    line-height: 2;
     font-family: 'Quintessential', cursive;
-    color: var(--light-bg);
+    color: var(--black);
     overflow-wrap: break-word;
     text-align: justify;
 }
-.parent .container .intro .box p a{
-    font-family: 'Open Sans', sans-serif;
-    font-size: 15px;
-    color: var(--pinky);
+.box .learnMore{
+    border: 1px var(--pinky) solid;
+    width: 10rem;
+    text-align: center;
+    margin-top: 15px;
+    padding: 5px;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+.learnMore a{
+    font-family: 'Redressed', cursive;
+    font-size: 18px;
+    text-decoration: none;
+    color: var(--black);
 }
 
+.learnMore:hover{
+    background-color:var(--purple);
+    border:4px var(--white) thick;
+    box-shadow:var(--card-box-shadow);
+    transition: 1s ease-in-out;
+    -webkit-transition: 1s ease-in-out;
+    -moz-transition: 1s ease-in-out;
+    -ms-transition: 1s ease-in-out;
+    -o-transition: 1s ease-in-out;
+}
+
+.learnMore a:hover{
+    color: var(--white);
+    transition: .5s ease-in;
+    -webkit-transition: .5s ease-in;
+    -moz-transition: .5s ease-in;
+    -ms-transition: .5s ease-in;
+    -o-transition: .5s ease-in;
+}
 .parent .slideshow-container {
     max-width: 500px;
     position: relative;
-    z-index: -1;
 }
 .parent .slideshow-container .mySlides {
     max-width: 800px;
     height: 500px;
-
 }
 
 .parent .slideshow-container .mySlides .responsive{
@@ -494,25 +516,20 @@ html{
 }
 .parent .slideshow-container .mySlides .text {
     position: absolute;
-    top: 0;
+    top: 40%;
     color: var(--light-bg);
-    text-decoration: underline;
+    text-decoration: none;
     font-size: 50px;
     width: 100%;
-    border-radius: 8px 8px 0 0;
     text-align: center;
     padding: 20px auto;
     font-weight: bolder;
     background: var(--background);
-    -webkit-border-radius: 8px 8px 0 0;
-    -moz-border-radius: 8px 8px 0 0;
-    -ms-border-radius: 8px 8px 0 0;
-    -o-border-radius: 8px 8px 0 0;
     z-index:1;
 }
 
 @media (min-width: 700px) {
-    .parent .container .intro {
+    .parent .box {
         margin-top: 20px;
         max-width: 500px;
     }
@@ -531,17 +548,17 @@ html{
 }
 
 @media (max-width: 500px) {
-    .parent .container .intro {
-        margin-top: 20px;
-        width: 400px;
+    .parent .box {
+        margin-top: 10px;
+        max-width: 500px;
     }
     .parent .slideshow-container {
-    max-width: 400px;
-    max-height: 320px;
-    margin: 10px;
-}
-    .parent .slideshow-container .mySlides .responsive{
         max-width: 400px;
+        max-height: 320px;
+        margin: 10px 14px;
+    }
+    .parent .slideshow-container .mySlides .responsive{
+        max-width: 350px;
         max-height: 310px;
     }
     .parent .slideshow-container .mySlides .text {
@@ -551,9 +568,9 @@ html{
 }
 
 @media (max-width: 350px) {
-    .parent .container .intro {
-        margin-top: 20px;
-        width: 250px;
+    .parent .container .box {
+        margin-top: 5px;
+        max-width: 500px;
     }
     .parent .slideshow-container {
         max-width: 250px;
@@ -561,7 +578,7 @@ html{
     }
     .parent .slideshow-container .mySlides .responsive{
         max-width: 250px;
-        height: 500px;
+        height: 600px;
     }
     .parent .slideshow-container .mySlides .text {
         width: 100%;
