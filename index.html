@@ -36,12 +36,12 @@
             <div class="dropdown">
                 <button class="dropBtn">Service</button>
                 <div class="dropdown-content">
-                    <a href="Cake.html">Cake</a>
-                    <a href="Textile.html">Textile</a>
-                    <a href="Pencil.html">Pencil</a>
-                    <a href="Paper.html">Paper Craft</a>
-                    <a href="Tye-dye.html">Tye-dye</a>
-                    <a href="Graphics.html">Graphics</a>
+                    <a href="Cake.html" class="links">Cake</a>
+                    <a href="Textile.html" class="links">Textile</a>
+                    <a href="Pencil.html" class="links">Pencil</a>
+                    <a href="Paper.html" class="links">Paper Craft</a>
+                    <a href="Tye-dye.html" class="links">Tye-dye</a>
+                    <a href="Graphics.html" class="links">Graphics</a>
                 </div>
             </div>
             <a href="Order.html">Order</a>
@@ -59,7 +59,7 @@
             <div class="fas fa-user" id="user-btn" onclick="user()"></div>
             <div class="fas fa-user-secret" id="secret-btn"></div>
         </div>
-        <div class="form-modal" id="formModalPage">
+        <div class="form-modal loginModal" id="LoginModalPage">
             <span id="closeAccount" onclick="close()">&times;</span>
             <div class="LoginPage form">
                 <form action="" class="login">
@@ -68,9 +68,12 @@
                     <input type="password" placeholder="Password">
                     <input type="submit">
                     <p>Forget Password?<a href="" class="forget">Click Here</a></p>
-                    <p>Register to See More <a class="existingAccount">New Fan</a></p>
+                    <p>Register to See More <a class="NewAccount">New Fan</a></p>
                 </form>
             </div>
+        </div>
+        <div class="form-modal regModal" id="RegistrationModalPage">
+            <span id="closeAccount" onclick="close()">&times;</span>
             <div class="registerPage form">
                 <form action="" class="register">
                     <h1>Register</h1>
@@ -98,15 +101,13 @@
 
     <!--Automatic Slideshow of images-->
     <div class="parent">
-        <div class="container">
-            <div class="box">
-                Brief Introduction the site. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facilis
-                sed eserunt optio quibusdam amet autem. Tempora, reiciendis nihil, dolorum veritatis amet
-                mollitia istinctio, aliquam quos voluptatum eveniet quae exercitationem! Lorem ipsum dolor sit
-                amet consectetur dipisicing elit.
-                <div class="learnMore">
-                    <a href="Service.html" target="_self">Learn More</a>
-                </div>
+        <div class="box">
+            Brief Introduction the site. Lorem ipsum dolor sit amet consectetur adipisicing elit. Est facilis
+            sed eserunt optio quibusdam amet autem. Tempora, reiciendis nihil, dolorum veritatis amet
+            mollitia istinctio, aliquam quos voluptatum eveniet quae exercitationem! Lorem ipsum dolor sit
+            amet consectetur dipisicing elit.
+            <div class="learnMore">
+                <a href="Service.html" target="_self">Learn More</a>
             </div>
         </div>
         <div class="slideshow-container">

@@ -18,12 +18,12 @@
 
     //Login interaction
 
-    var UserAccountModal = document.getElementById("formModalPage")
+    var UserAccountModal = document.getElementById("LoginModalPage")
     var  UserAccountBtn = document.getElementById("user-btn")
     var UserAccountCloseBtn = document.getElementById("closeAccount")
 
     function user(){
-        document.getElementById("formModalPage").style.display = "flex"
+        document.getElementById("LoginModalPage").style.display = "flex"
     }
 
     UserAccountCloseBtn.onclick = () => {
@@ -35,6 +35,34 @@
             UserAccountModal.style.display = "none"
         }
     }
+    
+    var UserAccountModal = document.getElementById("LoginModalPage")
+    var NewAccountPage = document.getElementById("RegistrationModalPage")
+    var UserAccountCloseBtn = document.getElementById("closeAccount")
+
+    var Register = document.getElementsByClassName("NewAccount")[0]
+    console.log(Register)
+        
+        /*Register.addEventListener('click', function() {
+            console.log("buttonOk!")
+        })
+        /*NewAccountPage.classList.add('regModal')
+        UserAccountModal.classList.remove('loginModal')*/
+
+    /*function reg(event){
+        if (event.target == )
+        NewAccount.style.display = "flex"
+    }
+
+    UserAccountCloseBtn.onclick = () => {
+        UserAccountModal.style.display = "none"
+    }
+
+    window.onclick = (event) => {
+        if (event.target == UserAccountModal) {
+            UserAccountModal.style.display = "none"
+        }
+    }*/
 
     //Switching Login and Register Pages
 
@@ -60,7 +88,7 @@
         slideIndex++;
 
         if(slideIndex > slides.length){
-            slideIndex = 1;
+            slideIndex = 0;
         }else {
                 slides[slideIndex -1].style.display = "block";
             }
