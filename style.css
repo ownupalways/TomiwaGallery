@@ -270,7 +270,7 @@ html{
 }
 
 .LoginPage{
-    width:30rem;
+    max-width:30rem;
     position: fixed;
     height: fit-content;
     padding: 5px;
@@ -287,7 +287,7 @@ html{
 }
 
 .registerPage{
-    width:30rem;
+    max-width:30rem;
     position: fixed;
     height: fit-content;
     padding: 5px;
@@ -472,38 +472,33 @@ html{
         height: 138vh;
     }
 
-    .form-modal #closeAccount{
-        color: var(--white);
-        font-size: 18px;
-        font-weight: 500;
-        width:23px;
-        height: fit-content;
-        position: absolute;
-        text-align: center;
-        top: 1%;
-        right: 90%;
-        border: .5px solid var(--white);
-        border-radius: 50%;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
-    }
-
-    .LoginPage{
+    .regModal {
         display: none;
-        right: 20rem;
-        top:10%;
-    }
-    .form{
-        margin: 0 2rem;
-    }
-    .registerPage{
-        position: sticky;
-        margin-bottom:45rem;
-        display: flex;
+        position: fixed;
+        top: 0;
         align-items: center;
         justify-content: center;
+        width: 100%;
+        height: 100%;
+        background: var(--tag);
+        z-index: 1010;
+    }
+
+    .LoginPage {
+        max-width: 25rem;
+        margin: 20px;
+        top: 20%;
+        padding: 5px;
+        color: var(--white);
+        font-size: 15px;
+    }
+    
+    .registerPage {
+        max-width: 25rem;
+        position: fixed;
+        top: 10%;
+        height: fit-content;
+        padding: 5px;
     }
 
     .registerPage .register .gender{
@@ -1205,40 +1200,38 @@ hr{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 120vh;
+    position: relative;
+    height: 100vh;
     background-color: var(--white);
 }
 
 .orderList{
+    position: absolute;
+    top: 5%;
     width: 360px;
     padding:2rem;
     border-radius: 1rem;
     box-shadow: var(--card-box-shadow);
-    -webkit-border-radius: 1rem;
-    -moz-border-radius: 1rem;
-    -ms-border-radius: 1rem;
-    -o-border-radius: 1rem;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
 }
 
 .tab{
     position: relative;
     height: 42px;
-    margin-bottom: 1.2rem;
     top: 0;
 }
 
 .form__input{
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
-    height: 100%;
+    height: 80%;
     font-size: 1.5rem;
     border: 1px solid var(--black);
     outline: none;
     padding: .5rem;
     background: none;
-    z-index: 1;
     border-radius: .5rem;
     -webkit-border-radius: .5rem;
     -moz-border-radius: .5rem;

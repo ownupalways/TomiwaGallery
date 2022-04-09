@@ -38,10 +38,6 @@
         UserAccountModal.style.display = "none"
     }
 
-    UserAccountCloseBtn.onclick = () => {
-        UserAccountModal.style.display = "none"
-    }
-
     RegisterClosePad.onclick = () => {
         Register.style.display = "none"
     }
