@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creativity|Art|Design</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="">
     <script src="T.js" defer></script>
     <!--font awesome cdnjs link-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -35,17 +36,17 @@
             <div class="dropdown">
                 <button class="dropBtn">Service</button>
                 <div class="dropdown-content">
-                    <a href="Cake.html">Cake</a>
-                    <a href="Textile.html">Textile</a>
-                    <a href="Pencil.html">Pencil</a>
-                    <a href="Paper.html">Paper Craft</a>
-                    <a href="Tye-dye.html">Tye-dye</a>
-                    <a href="Graphics.html">Graphics</a>
+                    <a href="Cake.html" class="links">Cake</a>
+                    <a href="Textile.html" class="links">Textile</a>
+                    <a href="Pencil.html" class="links">Pencil</a>
+                    <a href="Paper.html" class="links">Paper Craft</a>
+                    <a href="Tye-dye.html" class="links">Tye-dye</a>
+                    <a href="Graphics.html" class="links">Graphics</a>
                 </div>
             </div>
             <a href="Order.html">Order</a>
             <!-- <a href="Training.html">Training</a>
-             <a href="Sales.html">Sales</a>-->
+                     <a href="Sales.html">Sales</a>-->
             <a id="myBtn">Contact</a>
         </div>
 
@@ -58,34 +59,46 @@
             <div class="fas fa-user" id="user-btn" onclick="user()"></div>
             <div class="fas fa-user-secret" id="secret-btn"></div>
         </div>
-        <div class="form-modal" id="formModalPage">
-            <span id="closeAccount" onclick="close()">&times;</span>
-            <div class="LoginPage form">
-                <form action="" class="login">
-                    <h1>Login Now</h1>
-                    <input type="email" placeholder="Email">
-                    <input type="password" placeholder="Password">
-                    <input type="submit">
-                    <p>Forget Password?<a href="" class="forget">Click Here</a></p>
-                    <p>Register to See More<a class="login-account">New Fan</a></p>
-                </form>
-            </div>
-            <div class="registerPage form">
-                <form action="" class="register">
-                    <h1>Register</h1>
-                    <input type="text" placeholder="Name">
-                    <input type="text" placeholder="State">
-                    <input type="email" placeholder="Email">
-                    <input type="Password" placeholder="Password">
-                    <input type="number" placeholder="Phone">
-                    <input type="text" placeholder="State">
-                    <input type="submit" value="Register">
-                    <p>Forget Password? <a href="" class="forget">Click Here</a></p>
-                    <p>Register to See More <a class="newAccount"> New Fan</a></p>
-                </form>
-            </div>
+    </div>
+    <div class="form-modal loginModal" id="LoginModalPage">
+        <span id="closeLogin" onclick="close()">&times;</span>
+        <div class="LoginPage form">
+            <form action="" class="login">
+                <h1>Login Now</h1>
+                <input type="email" placeholder="Email">
+                <input type="password" placeholder="Password">
+                <input type="submit">
+                <p>Forget Password?<a href="" class="forget">Click Here</a></p>
+                <p>Register to See More <a class="NewAccount" onclick="NewAccount()">New Fan</a></p>
+            </form>
         </div>
     </div>
+    <div class="regModal" id="RegistrationModalPage">
+        <span id="closeRegistration" onclick="close()">&times;</span>
+        <div class="registerPage form">
+            <form action="" class="register">
+                <h1>Register</h1>
+                <input type="text" placeholder="Full Name">
+                <select name="gender" id="gender">
+                    <option value="Sex">Sex</option>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                    <option value="Others">Others</option>
+                </select>
+                <input type="email" placeholder="Email">
+                <input type="Password" placeholder="Password">
+                <input type="text" placeholder="Phone">
+                <input type="text" placeholder="Country">
+                <input type="text" placeholder="State">
+                <input type="text" placeholder="Local Government Area">
+                <input type="text" placeholder="Residential Address">
+                <input type="submit" value="Register">
+                <p>Forget Password? <a href="" class="forget">Click Here</a></p>
+                <p>Existing User <a class="OldUserAccount" onclick="user()"> New Fan</a></p>
+            </form>
+        </div>
+    </div>
+
     <div class="Service-container">
         <h3 class="title">Tye-dye</h3>
         <hr>
