@@ -247,7 +247,7 @@ html{
 }
 
 .register p a:hover{
-    color: aqua;
+    color:darkgrey;
 }
 
 #closeLogin{
