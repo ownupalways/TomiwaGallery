@@ -202,6 +202,11 @@ html{
     height: 100%;
     background:var(--tag);
     z-index: 1010;
+    transition: 5s linear;
+    -webkit-transition: 5s linear;
+    -moz-transition: 5s linear;
+    -ms-transition: 5s linear;
+    -o-transition: 5s linear;
 }
 
 .regModal{
@@ -499,6 +504,12 @@ html{
         top: 10%;
         height: fit-content;
         padding: 5px;
+    }
+    #closeLogin{
+        display: none;
+    }
+    #closeRegistration {
+        display: none;
     }
 
     .registerPage .register .gender{
@@ -1201,6 +1212,7 @@ hr{
     justify-content: center;
     align-items: center;
     position: relative;
+    width: 100%;
     height: 100vh;
     background-color: var(--white);
 }
@@ -1208,14 +1220,14 @@ hr{
 .orderList{
     position: absolute;
     top: 5%;
-    width: 360px;
+    width: 400px;
     padding:2rem;
     border-radius: 1rem;
     box-shadow: var(--card-box-shadow);
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
+    -webkit-border-radius: 1rem;
+    -moz-border-radius: 1rem;
+    -ms-border-radius: 1rem;
+    -o-border-radius: 1rem;
 }
 
 .tab{
@@ -1296,6 +1308,13 @@ hr{
 @media (max-width:700px) {
     .box-container .about p{
         font-size: 15px;
+    }
+
+    /*Order page responsiveness*/
+    .orderList {
+        top: 5%;
+        max-width: 300px;
+        margin:0 20px;
     }
 }
 
