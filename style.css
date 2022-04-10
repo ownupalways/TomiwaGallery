@@ -33,7 +33,7 @@ html{
     --black:rgb(8, 8, 8);
     --background:rgba(7, 6, 6, 0.2);
     --footerBackground:rgba(2, 1, 2, 0.8);
-    --formBackground:rgba(7, 6, 6, 0.5);
+    --formBackground:rgba(7, 6, 6, 0.9);
     --backgroundClose: rgba(245, 245, 250, 0.4);
     --white:#fff;
     --tag:rgba(30, 20, 20, 0.5);
@@ -46,6 +46,7 @@ html{
     --box-shadow2:0 5px 10px hsl(0, 1%, 73%);
     --card-box-shadow: 0 10px 15px 5px rgba(92, 99, 105, 0.5);
     --light-color:hsla(166, 17%, 85%, 0.993);
+    --icon:#ffff;
     --light-bg:#eee;
     --link: rgba(213, 173, 200, 0.5);
     --purple:purple;
@@ -192,6 +193,17 @@ html{
     -o-border-radius: .5rem;
 }
 
+.navbar .icon div:hover{
+    color: var(--purple);
+    background-color: var(--icon);
+    transition: .8s ease-in-out;
+    -webkit-transition: .8s ease-in-out;
+    -moz-transition: .8s ease-in-out;
+    -ms-transition: .8s ease-in-out;
+    -o-transition: .8s ease-in-out;
+}
+
+/*Privilege page for login and registration*/
 .form-modal{
     display: none;
     position:fixed;
@@ -219,6 +231,23 @@ html{
     height: 100%;
     background:var(--tag);
     z-index: 1010;
+}
+.login p a{
+    padding-left: 5px;
+    color: darkorchid;
+    text-decoration: underline;
+}
+.login p a:hover {
+    color:darkgrey;
+}
+.register p a{
+    padding-left: 5px;
+    color: darkorchid;
+    text-decoration: underline;
+}
+
+.register p a:hover{
+    color: aqua;
 }
 
 #closeLogin{
@@ -895,7 +924,7 @@ html{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin:1rem 0 2rem 0;
+    margin:1rem 0 10rem 0;
     user-select: none;
     width:100%;
     perspective: 8000px;
@@ -1093,7 +1122,10 @@ hr{
 @media(max-width:700px) and (orientation: landscape) {
     .Service-container{
         width: 100%;
-        height: 100vh;
+    }
+    .Service-container .box-container1 {
+        display: flex;
+        flex-wrap: wrap;
     }
     .box-container1 .images .back {
         font-size: 15px;
@@ -1113,55 +1145,56 @@ hr{
         width: 500px;
         height: 80%;
     }
-    .box-container1{
-        display: flex;
-        flex-wrap: wrap;
-    }
+    
     .box-container1 .images #myBtn .fab{
         font-size:10px;
     }
 
 }
-@media(max-width:500px){
-        .navbar .icon {
+
+
+@media(max-width:300px) {
+    .navbar .icon {
         margin-top: 0.8rem;
     }
-    .Service-container{
+
+    .Service-container {
         max-width: 500px;
-        height: 100vh;
-        z-index: -1;
+        height: 150vh;
     }
-    .title{
+
+    .title {
         font-size: 25px;
         margin-top: 1rem;
         padding: 0 0 0 11px;
     }
-    hr{
+
+    hr {
         margin: 0 12px;
     }
 
-    .box-container1{
+    .box-container1 {
         width: 100%;
         padding: 0;
         margin: 0;
     }
 
-    .box-container1 .images{
+    .box-container1 .images {
         max-width: 240px;
-        height:330px;
-        margin:3rem 3rem 0 10rem;
+        height: 330px;
+        /*margin: 3rem 3rem 0 10rem;*/
     }
 
-    .box-container1 .images .first{
+    .box-container1 .images .first {
         max-width: 240px;
-        height:270px;
+        height: 270px;
     }
-    
-    .box-container1 .images .front .flip{
+
+    .box-container1 .images .front .flip {
         margin: .5rem;
         cursor: pointer;
         font-size: 10px;
-        width:55px;
+        width: 55px;
         padding: 2px;
         border-radius: 3px;
         -webkit-border-radius: 3px;
@@ -1170,12 +1203,12 @@ hr{
         -o-border-radius: 3px;
     }
 
-    .box-container1 .images .back .flip{
+    .box-container1 .images .back .flip {
         position: absolute;
         left: 2%;
         cursor: pointer;
         font-size: 11px;
-        width:65px;
+        width: 65px;
         padding: 1.5px;
         border-radius: 3px;
         -webkit-border-radius: 3px;
@@ -1184,18 +1217,18 @@ hr{
         -o-border-radius: 3px;
     }
 
-    .box-container1 .images .back{
-        height: 230px;
+    .box-container1 .images .back {
+        height: 330px;
         width: 100%;
-        padding: 0 2rem; 
+        padding: 0 2rem;
     }
 
-    .box-container1 .images .back h3{
+    .box-container1 .images .back h3 {
         margin-top: 25px;
         font-size: 12px;
     }
 
-    .box-container1 .images .back .image-title{
+    .box-container1 .images .back .image-title {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1204,7 +1237,6 @@ hr{
         text-align: center;
     }
 }
-
 
 /*Place Order Page*/
 .order-container{
