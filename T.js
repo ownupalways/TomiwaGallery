@@ -88,6 +88,3 @@
             buttonClicked.parentElement.parentElement.classList.toggle('rotated')
         })
     }
-
-    
-

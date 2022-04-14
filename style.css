@@ -23,6 +23,7 @@ body{
     /*background: url(images/Bground3.jpg);*/
     background-position: cover cover;
     background-blend-mode: var(--pinky);
+    scroll-behavior: smooth;
 }
 
 html{
