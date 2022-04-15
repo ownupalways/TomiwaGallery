@@ -33,6 +33,7 @@ html{
 :root{
     --black:rgb(8, 8, 8);
     --background:rgba(7, 6, 6, 0.2);
+    --cardbackground:rgba(7, 6, 6, 0.5);
     --footerBackground:rgba(2, 1, 2, 0.8);
     --formBackground:rgba(7, 6, 6, 0.9);
     --backgroundClose: rgba(245, 245, 250, 0.4);
@@ -922,52 +923,54 @@ html{
 
 /*Service Page styling*/
 .box-container1{
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 330px;
+    align-items:baseline;
+    gap: 2.5rem;
     justify-content: center;
-    margin:1rem 0 10rem 0;
+    margin:1rem 20rem;
     user-select: none;
-    width:100%;
-    perspective: 8000px;
-    cursor: pointer;
+    width:70%;
 }
 
-.box-container1 .images{
+.images{
     position: relative;
-    width: 240px;
-    height:330px;
-    margin:1rem 2rem;
-    color: var(--black);
-    font-size: 20px;
-    background: var(--white);
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-rows: 330px;
     box-shadow: var(--card-box-shadow);
     border-radius: 8px;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
-    transform-style: preserve-3d;
-     transition: transform 3s;
-    -webkit-transition: transform 3s;
-    -moz-transition: transform 3s;
-    -ms-transition: transform 3s;
-    -o-transition: transform 3s;
 }
 
-.box-container1 .images .first{
-    width: 240px;
-    height:270px;
-    border-radius: 8px 8px 0 0;
-    -webkit-border-radius: 8px 8px 0 0;
-    -moz-border-radius: 8px 8px 0 0;
-    -ms-border-radius: 8px 8px 0 0;
-    -o-border-radius: 8px 8px 0 0;
+.images .first{
+    width:100%;
+    height:100%;
 }
 
-.box-container1 .images .image-title{
-    text-align: center;
-    font-size: 15px;
-    line-height: 1.5;
+.modal-card{
+    position: absolute;
+    bottom:0;
+    left:  -100%;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    align-items: flex-end;
+    padding: 1.5rem 1.25rem;
+    background-color:var(--cardbackground);
+    transition:.5s;
+    -webkit-transition:.5s;
+    -moz-transition:.5s;
+    -ms-transition:.5s;
+    -o-transition:.5s;
+}
+.images:hover .modal-card{
+    left: 0;
 }
 
 .box-container1 .images #myBtn a:hover{
@@ -975,121 +978,57 @@ html{
     background: var(--tag);
 }
 
-.box-container1 .images .front{
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+.image-title {
+    text-align: center;
+    margin: 1.5rem;
 }
-
-.box-container1 .images .front .flip{
-    position:absolute;
-    margin: 2rem;
-    cursor: pointer;
-    font-size: 10px;
-    width:75px;
-    padding: 5px;
-    background: none;
+.place-Order{
+    padding: .5rem 5rem;
     border: 2px var(--white) solid;
+    outline: none;
+    width: 200px;
+    text-decoration: none;
+    background-color:blueviolet;
     color: var(--white);
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-}
-
-.box-container1 .images .back .flip{
-    margin: .7rem;
-    cursor: pointer;
-    font-size: 10px;
-    width:75px;
-    padding: .2rem;
-    background: none;
-    border: 2px var(--black) solid;
-    color: var(--black);
-    border-radius: 5px;
-    -webkit-border-radius: 5px;
-    -moz-border-radius: 5px;
-    -ms-border-radius: 5px;
-    -o-border-radius: 5px;
-}
-.box-container1 .images .back .flip:hover{
-    background: var(--black);
-    color: var(--white);
-    transition:.5s ease-in;
-    -webkit-transition:.5s ease-in;
-    -moz-transition:.5s ease-in;
-    -ms-transition:.5s ease-in;
-    -o-transition:.5s ease-in;
-}
-.box-container1 .images .back{
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-    position: absolute;
-    height: fit-content;
-    width: 100%;
-    font-size: 14px;
-    background-color: var(--white);
-    color: var(--black);
+    font-size: 15px;
     border-radius: 8px;
-    padding: 1rem 2rem; 
-    top: 0;
-    left: 0;
     -webkit-border-radius: 8px;
     -moz-border-radius: 8px;
     -ms-border-radius: 8px;
     -o-border-radius: 8px;
-    transform: rotateY(180deg);
-    -webkit-transform: rotateY(180deg);
-    -moz-transform: rotateY(180deg);
-    -ms-transform: rotateY(180deg);
-    -o-transform: rotateY(180deg);
 }
 
-.place-Order{
-    padding: .5rem;
-    border: none;
-    outline: none;
-    width: 200px;
-    text-decoration: none;
-    background-color: blueviolet;
-    border-radius: 3px;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
+.place-Order:hover {
+    background-color:var(--white);
+    color: var(--black);
+    font-weight: 700;
+    transition: .8s ease-in;
+    -webkit-transition: .8s ease-in;
+    -moz-transition: .8s ease-in;
+    -ms-transition: .8s ease-in;
+    -o-transition: .8s ease-in;
 }
 
-.place-Order:hover{
-    background-color:var(--purple) ;
-}
-
-.place-Order a{
+.box-container1 .images .back{
+    display: grid;
+    padding: 2rem 1rem 2rem 4rem;
+    position: absolute;
+    top: 0;
     color: var(--white);
-    font-size: 12px;
+    font-size: 15px;
 }
-
-.rotated{
-    transform: rotateY(-180deg);
-    -webkit-transform: rotateY(-180deg);
-    -moz-transform: rotateY(-180deg);
-    -ms-transform: rotateY(-180deg);
-    -o-transform: rotateY(-180deg);
-}
-
 .box-container1 .images .back h3{
-    margin-top: 7px;
     font-size: 15px;
     text-decoration: underline;
     text-align: center;
 }
 
-.box-container1 .images .back .description{
-    text-align: center;
-}
-
 .card-foot{
-    margin-top: 5px;
-    text-align: center;
+    margin-top:2rem;
+    margin-left: 3.5rem;
+    font-family: 'Cormorant Upright', serif;
+    font-size: 18px;
+    font-weight: 600;
 }
 
 .tomiwa{
@@ -1191,33 +1130,6 @@ hr{
         height: 270px;
     }
 
-    .box-container1 .images .front .flip {
-        margin: .5rem;
-        cursor: pointer;
-        font-size: 10px;
-        width: 55px;
-        padding: 2px;
-        border-radius: 3px;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        -ms-border-radius: 3px;
-        -o-border-radius: 3px;
-    }
-
-    .box-container1 .images .back .flip {
-        position: absolute;
-        left: 2%;
-        cursor: pointer;
-        font-size: 11px;
-        width: 65px;
-        padding: 1.5px;
-        border-radius: 3px;
-        -webkit-border-radius: 3px;
-        -moz-border-radius: 3px;
-        -ms-border-radius: 3px;
-        -o-border-radius: 3px;
-    }
-
     .box-container1 .images .back {
         height: 330px;
         width: 100%;
@@ -1227,15 +1139,6 @@ hr{
     .box-container1 .images .back h3 {
         margin-top: 25px;
         font-size: 12px;
-    }
-
-    .box-container1 .images .back .image-title {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
     }
 }
 
