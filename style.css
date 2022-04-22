@@ -26,7 +26,7 @@ body{
 }
 
 html{
-    font-size: 62.5%;
+    font-size: 65.5%;
 }
 
 :root{
@@ -53,6 +53,8 @@ html{
     --purple:purple;
     --contact:rgba(8, 176, 206, 0.9);
     --submit-btn:lightgreen;
+    --normal-font-size:font-size: 1.8rem;
+    --small-font-size:font-size: .75rem;
 }
 
 /*Styling navigation bar Menu*/
@@ -1458,10 +1460,10 @@ hr{
 }
 .field-label{
     position: absolute;
-    left:1.8rem;
-    top: 1.5rem;
-    font-size: 1.3rem;
+    left:1rem;
+    top: 1rem;
     padding: 0 .25rem;
+    font-size: var(--normal-font-size);
     background-color: var(--white);
     color: var(--black);
     transition: .3s;
