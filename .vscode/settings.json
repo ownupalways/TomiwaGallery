@@ -5,5 +5,10 @@
     "liveServer.settings.NoBrowser": true,
     "cSpell.words": [
         "Quilling"
-    ]
+    ],
+    "sync.quietSync": true,
+    "sync.forceUpload": true,
+    "sync.forceDownload": true,
+    "sync.autoUpload": true,
+    "sync.autoDownload": true
 }
