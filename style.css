@@ -1508,6 +1508,13 @@ hr{
     overflow: hidden;
 }
 
+.footer-content{
+    margin: 0 10rem 10rem 10rem;
+    text-align: center;
+    color:var(--black);
+    font-size: 3rem;
+    font-family: 'Quintessential', cursive;
+}
 .footer-modal{
     position: absolute;
     bottom: -80%;

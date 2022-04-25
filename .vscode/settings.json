@@ -1,3 +1,9 @@
 {
-    "liveServer.settings.CustomBrowser": "firefox"
+    "liveServer.settings.CustomBrowser": "firefox",
+    "liveServer.settings.ChromeDebuggingAttachment": false,
+    "liveServer.settings.fullReload": true,
+    "liveServer.settings.NoBrowser": true,
+    "cSpell.words": [
+        "Quilling"
+    ]
 }
