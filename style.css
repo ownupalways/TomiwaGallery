@@ -373,7 +373,7 @@ html{
         display: inline-block;
         width: 55px;
         height: 50px;
-        padding: 15px;
+        padding: 10px 5px;
     }
 
     .navbar .nav-btn label span{
@@ -872,7 +872,7 @@ html{
     font-size: 15px
 
 }
-.modal-share .fas, span {
+.modal-share .fas span {
     margin-left: 1rem;
     color: var(--white);
     box-shadow: var(--box-shadow);
@@ -931,7 +931,7 @@ html{
         gap: 2.5rem;
         padding: 0 10rem;
         width: 100%;
-        height: 100%;
+        height: 65vh;
     }
 
     hr {
@@ -1069,7 +1069,7 @@ hr{
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         grid-auto-rows: 330px;
         gap: 2.5rem;
-        height: 200vh;
+        height: 150vh;
         padding: 0 15rem;
     }
     
@@ -1298,7 +1298,7 @@ hr{
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         grid-auto-rows: 330px;
         width:100%;
-        height: 150vh;
+        height: 120vh;
         padding: 2rem;
     }
     .images{
@@ -1504,19 +1504,33 @@ hr{
 
 /*Footer styling for default device view*/
 .foot{
+    position: relative;
+    overflow: hidden;
+}
+
+.footer-modal{
     position: absolute;
-    bottom: -100%;
+    bottom: -80%;
     width: 100%;
-    height: 40%;
-    padding:10px 20px 23px 5px;
-    background: var(--footerBackground);
-    z-index: 1000;
+    height: 100%;
+    display: grid;
+    align-items: flex-end;
+    padding-bottom: 5rem;
+    background-color:var(--pink);
+    transition:.5s;
+    -webkit-transition:.5s;
+    -moz-transition:.5s;
+    -ms-transition:.5s;
+    -o-transition:.5s;
+}
+
+.foot:hover .footer-modal {
+    bottom: 0;
 }
 
 .down-side{
     display:flex;
     flex-wrap: wrap;
-    height: 45px;
     justify-content: space-between;
 }
 .down-side .share{
@@ -1541,9 +1555,14 @@ hr{
 }
 
 .down-side .share a span{
-    margin-left: 2rem;
+    margin-left: 2.5rem;
+    padding: .5rem;
+    color: var(--white);
 }
-.down-side .share a:hover{
+.down-side .share a span:hover {
+    box-shadow: var(--box-shadow);
+}
+.down-side .share a:hover, .down-side .share a > span:hover, .down-side .share a:hover span{
     cursor: pointer;
     background: var(--pinky);
     color: var(--white);
@@ -1564,25 +1583,34 @@ hr{
 }
 .contact .fas span {
     margin-left: 1rem;
+    color: var(--white);
+    padding: .3rem;
 }
 
 .contact .fas span:hover{
-    color: var(--pinky);
+    
+    box-shadow: var(--box-shadow);
 }
-.down-side .developer{
+.down-side .developer p{
+    display: flex;
+    flex-wrap: wrap;
+    width: 250px;
+    align-items: flex-end;
+    font-size: 15px;
+    margin-top: 13rem;
     color:var(--white);
-    padding: 20px 0;
-    margin-right: 0 ;
+    padding: 15px 0 0 5rem;
 }
 
 .contact a {
     display: block; 
     font-size: 18px; 
     color: white;
+    padding: .5rem;
 }
 
 .contact a:hover{
-    color: var(--pinky);
+    box-shadow: var(--box-shadow);
 }
 @media (max-width:500px) {
     .down-side .share{
