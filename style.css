@@ -790,11 +790,11 @@ hr{
     border: 2px solid var(--pinky);
 }
 /*Styling About Page*/
-.about {
+.about-content {
     text-align: justify;
     color: var(--black);
     font-family:'Open Sans', sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 1.5;
     margin: 5rem 25rem;
 }
@@ -833,14 +833,12 @@ hr{
 }
 
 .down-side{
-    display:flex;
-    flex: 1;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
 }
 .down-side .share{
     display: grid;
-    width: fit-content;
     margin:10px 0 10px 20px;
 }
 .down-side .share a{
@@ -880,6 +878,19 @@ hr{
     font-size: 18px; 
     color:var(--white);
 }
+.number{
+    line-height: 1;
+}
+.contact .About-us {
+    text-align: center;
+    padding: 5px;
+    font-size: 18px; 
+    color: white;
+}
+
+.contact .About-us:hover{
+    box-shadow: var(--box-shadow);
+}
 
 .contact .fas {
     margin-bottom:1rem;
@@ -892,7 +903,6 @@ hr{
 }
 
 .contact .fas span:hover{
-    
     box-shadow: var(--box-shadow);
 }
 .down-side .developer p{
@@ -904,17 +914,6 @@ hr{
     margin-top: 13rem;
     color:var(--white);
     padding: 15px 0 0 5rem;
-}
-
-.contact a {
-    display: block; 
-    font-size: 18px; 
-    color: white;
-    padding: .5rem;
-}
-
-.contact a:hover{
-    box-shadow: var(--box-shadow);
 }
 
 /***********MEDIA QUERY STARTS HERE************/
