@@ -1,5 +1,6 @@
 {
     "recommendations": [
-        "Shan.code-settings-sync"
+        "shan.code-settings-sync",
+        "ms-mssql.mssql"
     ]
 }
