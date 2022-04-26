@@ -834,6 +834,7 @@ hr{
 
 .down-side{
     display:flex;
+    flex: 1;
     flex-wrap: wrap;
     justify-content: space-between;
 }
@@ -874,15 +875,14 @@ hr{
 }
 
 .contact{
-    display: block; 
+    display: grid; 
     margin-top: 1.3rem;
     font-size: 18px; 
     color:var(--white);
 }
 
 .contact .fas {
-    display: block;
-    margin-bottom:3rem;
+    margin-bottom:1rem;
     color: var(--pinky);
 }
 .contact .fas span {
@@ -1609,25 +1609,23 @@ hr{
 
 /*****FOOTER STYLING *****/
     .down-side{
-        display: grid;
+        display:grid;
     }
     .down-side .share{
-        align-items: center;
-        justify-content: center;
+        margin-left:3rem ;
     }
     .down-side .share a{
-        display: inline;
-        margin: 0 0 0 5px;
+        margin:5px;
         height: 30px;
         width: 30px;
         text-align: center;
         color: var(--black);
-        font-size: 10px;
-        border-radius: 50%;
-        -webkit-border-radius: 50%;
-        -moz-border-radius: 50%;
-        -ms-border-radius: 50%;
-        -o-border-radius: 50%;
+        font-size: 15px;
+    }
+
+    .down-side .contact{
+        line-height:.5;
+        margin-left:1rem ;
     }
     .footer-space{
         height: 80vh;
