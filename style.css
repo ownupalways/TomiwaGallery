@@ -501,14 +501,14 @@ logo{
     -o-border-radius: 5px;
 }
 
-#close{
+.modal #close{
+    position: absolute;
+    top: 22%;
     font-size: 30px;
     width:35px;
     height: fit-content;
     color: var(--white);
-    right:1.5rem;
-    position: absolute;
-    top: 10px;
+    right:42rem;
     margin: 10px 30px;
     font-weight: bold;
     border: .5px solid var(--white);
@@ -790,9 +790,16 @@ hr{
     border: 2px solid var(--pinky);
 }
 /*Styling About Page*/
+.about-box{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color:var(--pink1);
+}
+
 .about-content {
     text-align: justify;
-    color: var(--black);
+    color: var(--white);
     font-family:'Open Sans', sans-serif;
     font-size: 20px;
     line-height: 1.5;
@@ -883,6 +890,7 @@ hr{
     display: block;
     text-decoration: underline;
     font-size: 18px; 
+    line-height: 2;
     color: var(--white);
 }
 
@@ -900,10 +908,10 @@ hr{
     background: var(--light-color);
     box-shadow: var(--box-shadow);
     border-radius: 8px;
-    -webkit-border-radius:;
-    -moz-border-radius:;
-    -ms-border-radius:;
-    -o-border-radius:;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
 .contact .fas span {
     margin-left: 2rem;
@@ -1164,9 +1172,9 @@ hr{
         margin: 30% auto;
     }
 
-    .modal .modal-content .close{
-        float: right;
-        top: 0;
+    .modal #close{
+        left:85%;
+        top: 28%;
         margin: 5px 5px;
         font-size: 28px;
         font-weight: bold;
@@ -1307,7 +1315,23 @@ hr{
     .box-container1 .images #myBtn .fab{
         font-size:10px;
     }
+    /*******ABOUT PAGE STYLING********/
+    .about-content {
+        text-align: justify;
+        color: var(--black);
+        font-family:'Open Sans', sans-serif;
+        font-size: 20px;
+        line-height: 1.5;
+        margin:2rem;
+    }
 
+    .about-content h1{
+        font-size: 20px;
+    }
+
+    .about-content p{
+        font-size: 15px;
+    }
     /***Order page responsiveness***/
     .orderList {
         top: 5%;
@@ -1358,6 +1382,9 @@ hr{
 
 /***********Media Query for MAX-WIDTH:500PX********/
 @media (max-width: 500px) {
+    .navbar .icon div{
+        font-size: 20px;
+    }
     .parent {
         top: 5%;
         right: 0;
@@ -1390,6 +1417,21 @@ hr{
     .learnMore a {
         font-size: 12px;
     }
+
+    .modal-content .modal-profile{
+        width:90%;
+        margin: 11% auto;
+        padding: 20px;
+    }
+    .modal #close{
+        left:45%;
+        top: 30%;
+        margin: 5px 5px;
+        font-size: 28px;
+        font-weight: bold;
+        color: var(--white);
+    }
+
 
 /**5** Styling pages for all Files**5**/
     .box-container1{
@@ -1570,6 +1612,11 @@ hr{
 /*3*Navigation bar styling*3*/
     .navbar .icon {
         margin-top: 0.8rem;
+    }
+
+    .navbar .icon div{
+        top: 5%;
+        font-size: 18px;
     }
     .title {
         font-size: 25px;
