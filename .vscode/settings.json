@@ -1,5 +1,6 @@
 {
     "liveServer.settings.CustomBrowser": "firefox",
     "liveServer.settings.fullReload": true,
-    "liveServer.settings.useBrowserPreview": true
+    "liveServer.settings.useBrowserPreview": true,
+    "liveServer.settings.ChromeDebuggingAttachment": false
 }

@@ -18,49 +18,49 @@
 </head>
 
 <body>
-    <div class="navbar">
-        <div class="logo-space">
-            <img src="images/" alt="">
-        </div>
+    <div class="about-box">
+        <div class="navbar">
+            <div class="logo-space">
+                <img src="images/" alt="">
+            </div>
 
-        <!--responsive navbar toggle button-->
-        <input type="checkbox" id="nav-check">
-        <div class="nav-btn">
-            <label for="nav-check">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-        </div>
+            <!--responsive navbar toggle button-->
+            <input type="checkbox" id="nav-check">
+            <div class="nav-btn">
+                <label for="nav-check">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
 
-        <div class="nav-link">
-            <a href="index.html">Home</a>
-            <a href="Pencil.html" class="links">Pencil Work</a>
-            <a href="Paper.html" class="links">Paper Craft</a>
-            <a href="Graphics.html" class="links">Graphics</a>
-                <div class="dropdown">
-                    <button class="dropBtn">Textile</button>
-                    <div class="dropdown-content">
-                <a href="Fabric.html" class="links">Fabrics</a>
-                <a href="Tye-dye.html" class="links">Tye-dye</a>
-                <a href="Weaving.html" class="links">Weaving</a>
+            <div class="nav-link">
+                <a href="index.html">Home</a>
+                <a href="Pencil.html" class="links">Pencil Work</a>
+                <a href="Paper.html" class="links">Paper Craft</a>
+                <a href="Graphics.html" class="links">Graphics</a>
+                    <div class="dropdown">
+                        <button class="dropBtn">Textile</button>
+                        <div class="dropdown-content">
+                    <a href="Fabric.html" class="links">Fabrics</a>
+                    <a href="Tye-dye.html" class="links">Tye-dye</a>
+                    <a href="Weaving.html" class="links">Weaving</a>
+                    </div>
                 </div>
+            </div>
+
+            <div class="night-mode">
+                <img src="images/" alt="">
+            </div>
+
+            <div class="icon">
+                <!--<div class="fas fa-search" id="search-btn"></div>-->
+                <div class="fas fa-user" id="user-btn" onclick="user()"></div>
+                <!--<a href="Transactions.html" target="_self">-->
+                <!--<div class="fas fa-user-secret" id="secret-btn"></div>-->
             </div>
         </div>
 
-        <div class="night-mode">
-            <img src="images/" alt="">
-        </div>
-
-        <div class="icon">
-            <!--<div class="fas fa-search" id="search-btn"></div>-->
-            <div class="fas fa-user" id="user-btn" onclick="user()"></div>
-            <!--<a href="Transactions.html" target="_self">-->
-            <!--<div class="fas fa-user-secret" id="secret-btn"></div>-->
-        </div>
-    </div>
-
-    <div class="about-box">
         <div class="form-modal loginModal" id="LoginModalPage">
             <span id="closeLogin" onclick="close()">&times;</span>
             <div class="LoginPage form">
@@ -133,7 +133,10 @@
     
         <div class="foot">
             <div class="footer-space">
-                <div class="footer-content">The traditional values and beauty that attached to the designs of a Tye-dyed fabric makes it unique amongst all fabric designs. In this wise, we produce our design with colorful and lasting dyes on durable fabrics to customers' satisfaction.</div>
+                <div class="footer-content">
+                    The traditional values and beauty that attached to the designs of a Tye-dyed fabric makes it unique amongst all fabric designs. In this wise, we produce our design with colorful and lasting dyes on durable fabrics to customers' satisfaction.
+                </div>
+                
                 <div class="footer-modal">
                     <footer class="down-side">
                         <div class="share">

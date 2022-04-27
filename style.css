@@ -799,7 +799,7 @@ hr{
 
 .about-content {
     text-align: justify;
-    color: var(--white);
+    color: var(--black);
     font-family:'Open Sans', sans-serif;
     font-size: 20px;
     line-height: 1.5;
@@ -1586,6 +1586,7 @@ hr{
         margin: 0;
     }
     .parent .box {
+        line-height: 1.5;
         max-width: 300px;
     }
     .parent .slideshow-container {
