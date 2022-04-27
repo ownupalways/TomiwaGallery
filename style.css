@@ -1295,7 +1295,7 @@ hr{
         -moz-transition: .8s ease-in;
         -ms-transition: .8s ease-in;
         -o-transition: .8s ease-in;
-}  
+    } 
 
     .title{
         padding: 0 0 0 25px;
@@ -1327,7 +1327,8 @@ hr{
         width: 30px;
         text-align: center;
         color: var(--black);
-        font-size: 15px;
+        font-size: 18px;
+        padding: 5px;
     }
 
     .down-side .number{
@@ -1347,23 +1348,12 @@ hr{
         position: absolute;
         top: 85%;
         margin-left: 8rem;
-        background-color:bisque;
     }
     .footer-space{
-        height: 80vh;
+        height: 50vh;
     }
     .footer-content{
         margin: 0  1rem 1rem 1rem;
-    }
-
-    .footer-modal{
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        
-        display: grid;
-        align-items: flex-end;
-        background-color:var(--black);
     }
 }
 
