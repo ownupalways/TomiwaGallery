@@ -1577,15 +1577,14 @@ hr{
         top: 0;
         height: 100vh;
         max-width: 400px;
-        margin: 0 8.5rem;
     }
     .parent .box {
         line-height: 2;
         max-width: 300px;
-        max-height: 200px;
+        max-height: 330px;
         font-size: 15px;
         margin: 0 10rem;
-        margin-top:5rem
+        margin-top:1rem
     }
 
     /*.parent .box-top {
@@ -1622,9 +1621,9 @@ hr{
         margin: 0 10rem;
     }
 
-    /*.parent .box-top {
-        
-    }*/
+    .box-top {
+        margin: 0 2rem 2rem 2rem;    
+    }
     .parent .slideshow-container {
         max-width: 260px;
         max-height: 320px;
