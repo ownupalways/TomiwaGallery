@@ -358,57 +358,42 @@ html{
 .parent{
     display:flex;
     justify-content: center;
-    align-items: center;
     flex-wrap: wrap;
-    left:10%;
-    gap: 4rem;
-    height: 110vh;
-    margin: 0 15px;
+    gap: 2rem;
+    height: 80vh;
+    margin: 3rem 3px;
 }
 
 .parent .box{
-    max-width: 500px;
-    max-height: 530px;
+    max-width: 380px;
+    max-height: 330px;
     font-size: 18px;
     line-height: 2;
     font-family: 'Quintessential', cursive;
     color: var(--black);
     overflow-wrap: break-word;
     text-align: justify;
+    margin: 10rem 3px;
 }
 
 .box .learnMore{
-    border: 2px var(--pinky) solid;
-    width: 10rem;
-    text-align: center;
-    margin-top: 15px;
+    font-family: 'Redressed', cursive;
+    font-size: 18px;
+    text-decoration:underline;
     padding: 5px;
+    color:var(--purple);
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
 }
-.learnMore a{
-    font-family: 'Redressed', cursive;
-    font-size: 15px;
-    text-decoration: none;
-    color: var(--black);
-}
 
 .learnMore:hover{
-    background-color:var(--purple);
-    border:4px var(--white) thick;
-    box-shadow:var(--card-box-shadow);
-    transition: 1s ease-in-out;
-    -webkit-transition: 1s ease-in-out;
-    -moz-transition: 1s ease-in-out;
-    -ms-transition: 1s ease-in-out;
-    -o-transition: 1s ease-in-out;
-}
-
-.learnMore a:hover{
     color: var(--white);
+    background-color:var(--purple);
+    box-shadow:var(--card-box-shadow);
+    text-decoration:none;
     transition: .5s ease-in;
     -webkit-transition: .5s ease-in;
     -moz-transition: .5s ease-in;
@@ -1143,20 +1128,29 @@ hr{
     }
 
     .parent {
-        top: 0;
         gap: 0;
-        max-width: 500px;
-        height: 110vh;
-        margin: 0rem 10rem;
+        display: grid;
+        grid-template-columns:  repeat(auto-fit, minmax(500px, 1fr));
+        height: 100vh;
+        margin: 2rem 6.5rem auto;
     }
 
     .parent .box {
-        max-width: 650px;
+        max-width: 550px;
+        margin-top: 2rem;
+    }
+
+    .parent .box-top {
+        margin:0 0 2rem 0;
     }
     .parent .slideshow-container {
         max-width: 500px;
-        margin: 0 20px;
+        margin: 0 20px 0 20px;
     }
+
+    /*.parent .slideshow-container .mySlides{
+       
+    }*/
     .parent .slideshow-container .mySlides .responsive{
         max-width: 500px;
         height: 500px;
@@ -1386,24 +1380,27 @@ hr{
         font-size: 20px;
     }
     .parent {
-        top: 5%;
-        right: 0;
         max-width: 500px;
-        height: 110vh;
-        gap: 10px;
+        height: 100vh;
         margin: 0 3rem;
     }
     .parent .box {
         max-width: 500px;
+        margin:4rem 2rem 5rem 2rem;
+    }
+
+    .parent .box-top {
+        margin:2rem 2rem 0 2rem;
     }
     .parent .slideshow-container {
-        max-width: 500px;
+        max-width: 450px;
         max-height: 320px;
-        margin: 0 10px;
+        margin: 2rem 2.25rem;
     }
+   
     .parent .slideshow-container .mySlides .responsive{
-        max-width: 320px;
-        max-height: 310px;
+        max-width: 450px;
+        max-height: 380px;
     }
     .parent .slideshow-container .mySlides .text {
         width: 100%;
@@ -1413,9 +1410,8 @@ hr{
     .box .learnMore {
         width: 8rem;
         padding:0 2px 4px 2px;
-    }
-    .learnMore a {
-        font-size: 12px;
+        font-size: 15px;
+        padding: 5px;
     }
 
     .modal-content .modal-profile{
@@ -1576,38 +1572,76 @@ hr{
 }
 
 /***********Media Query for MAX-WIDTH:300PX********/
-@media (max-width: 300px) {
+@media (max-width: 364px) {
     .parent {
         top: 0;
-        padding:0 10px;
-        gap: 0;
-        max-width: 300px;
-        height: 110vh;
-        margin: 0;
+        height: 100vh;
+        max-width: 400px;
+        margin: 0 8.5rem;
     }
     .parent .box {
-        line-height: 1.5;
+        line-height: 2;
         max-width: 300px;
+        max-height: 200px;
+        font-size: 15px;
+        margin: 0 10rem;
+        margin-top:5rem
     }
+
+    /*.parent .box-top {
+        margin: 0 0 2rem 0;
+    }*/
+
     .parent .slideshow-container {
         max-width: 300px;
         max-height: 320px;
-        margin:0 10px;
     }
     .parent .slideshow-container .mySlides .responsive {
-        max-width: 250px;
-        max-height: 310px;
+        max-width: 300px;
+        max-height: 350px;
+        margin: 0 7.5rem;
     }
     .parent .slideshow-container .mySlides .text {
         width: 100%;
         font-size: 30px;
+        margin: 0 7.5rem;
+    }
+}
+@media (max-width: 300px) {
+    .parent {
+        top: 0;
+        height: 110vh;
+        max-width: 300px;
+        margin: 0 8.5rem;
+    }
+    .parent .box {
+        line-height: 1.5;
+        max-width: 300px;
+        max-height: 200px;
+        font-size: 15px;
+        margin: 0 10rem;
+    }
+
+    /*.parent .box-top {
+        
+    }*/
+    .parent .slideshow-container {
+        max-width: 260px;
+        max-height: 320px;
+    }
+    .parent .slideshow-container .mySlides .responsive {
+        max-width: 260px;
+        max-height: 310px;
+        margin: 0 6rem;
+    }
+    .parent .slideshow-container .mySlides .text {
+        width: 100%;
+        font-size: 30px;
+        margin: 0 6rem;
     }
     .box .learnMore {
         width: 8rem;
-        padding: 0 2px 4px 2px;
-    }
-    .learnMore a {
-        font-size: 12px;
+        padding: 5px;
     }
 
 /*3*Navigation bar styling*3*/
