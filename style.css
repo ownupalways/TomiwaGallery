@@ -1093,13 +1093,14 @@ hr{
     }
     .parent{
         display:grid;
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        grid-auto-rows: 240px;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+        grid-auto-rows: 350px;
         height: 80vh;
+        gap: 2rem;
     }
 
     .parent .box{
-        max-width: 350px;
+        max-width: 400px;
         max-height: 300px;
         font-size: 18px;
         line-height: 2;
@@ -1108,18 +1109,21 @@ hr{
         text-align: justify;
         margin: 5rem;
     }
-
-    .parent .slideshow-container .mySlides{
-        position: relative;
+    /* .parent .slideshow-container{
+       
+    } */
+    .mySlides{
         max-width: 450px;
         max-height: 470px;
+        position: relative;
         margin-top:2rem;
-    }  
-    
-    
+    }
+
     .responsive{
-        max-width: 100%;
-        height:auto;
+        width: 100%;
+        max-width: 450px;
+        max-height:600px;
+        object-fit: contain;
         border-radius: 8px;
         -webkit-border-radius: 8px;
         -moz-border-radius: 8px;
