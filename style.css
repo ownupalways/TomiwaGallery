@@ -1109,17 +1109,17 @@ hr{
         margin: 5rem;
     }
 
-    /* .parent .slideshow-container {
+    .parent .slideshow-container .mySlides{
         position: relative;
-        max-width: 400px;
-        max-height: 350px;
+        max-width: 450px;
+        max-height: 470px;
         margin-top:2rem;
-    }  */
+    }  
     
     
-    .parent .slideshow-container .mySlides .responsive{
-        width: 450px;
-        height: 470px;
+    .responsive{
+        max-width: 100%;
+        height:auto;
         border-radius: 8px;
         -webkit-border-radius: 8px;
         -moz-border-radius: 8px;
@@ -1132,7 +1132,7 @@ hr{
         color: var(--light-bg);
         text-decoration: none;
         font-size: 50px;
-        width: 450px;
+        width: 100%;
         text-align: center;
         padding: 20px auto;
         font-weight: bolder;
