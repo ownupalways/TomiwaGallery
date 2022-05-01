@@ -1,40 +1,53 @@
-{
-    "liveServer.settings.CustomBrowser": "chrome",
-    "liveServer.settings.fullReload": false,
-    "liveServer.settings.useBrowserPreview": true,
-    // "liveServer.settings.ChromeDebuggingAttachment": false,
-    // "sync.autoDownload": true,
-    // "sync.syncExtensions": false,
-    // "sync.removeExtensions": false,
-    // "sync.quietSync": true,
-    // "sync.forceUpload": true,
-    // "sync.forceDownload": true,
-    // "sync.autoUpload": true,
-    "liveServer.settings.NoBrowser": false,
-    // "liveServer.settings.https": {
-    //     "enable": true,
-    //     "cert": "",
-    //     "key": "",
-    //     "passphrase": ""
-    // },
-    "liveServer.settings.ignoreFiles": [
-        ".vscode/**",
-        "**/*.scss",
-        "**/*.sass",
-        "**/*.ts"
-    ],
-    "liveServer.settings.NoBrowser": false,
-    "liveServer.settings.ChromeDebuggingAttachment": false,
-    "liveServer.settings.donotShowInfoMsg": false,
-    "liveServer.settings.AdvanceCustomBrowserCmdLine": "",
-    "liveServer.settings.useWebExt": false,
-    "liveServer.settings.useLocalIp": false,
-    "liveServer.settings.showOnStatusbar": true,
-    "liveServer.settings.proxy": {
-        "enable": true,
-        "baseUri": "/",
-        "proxyUri": "http://127.0.0.1:80"
+{      "liveServer.settings.AdvanceCustomBrowserCmdLine": "Chrome",
+    "workbench.startupEditor": "newUntitledFile",
+    "#terminal.integrated.shell.windows": "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
+    "git.enableSmartCommit": true,
+    "editor.cursorSmoothCaretAnimation": true,
+    "phpcs.trace.server": "messages",
+    "phpcs.standard": "null",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.settings.openDefaultKeybindings": true,
+    "workbench.settings.openDefaultSettings": true,
+    "git.autofetch": true,
+    "editor.linkedEditing": true,
+    "editor.wordWrap": "on",
+    "liveServer.settings.useWebExt": true,
+    "liveServer.settings.proxyUri": {
+        "enable": true
     },
-
-    "liveServer.settings.file":""
+    "mssql.connections": [
+        {
+            "server": "{{put-server-name-here}}",
+            "database": "{{put-database-name-here}}",
+            "user": "{{put-username-here}}",
+            "password": ""
+        }
+    ],
+    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "php.validate.executablePath": "",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.matchBrackets": "always",
+    "cSpell.userWords": [
+        "aesthetical",
+        "andflavours",
+        "Bground",
+        "cardbackground",
+        "cdnjs",
+        "colour",
+        "Oluwadipe",
+        "Quilling",
+        "Tomest",
+        "tomiwa"
+    ],
+    "sync.autoUpload": true,
+    "sync.forceDownload": true,
+    "sync.forceUpload": true,
+    "sync.quietSync": true,
+    "explorer.confirmDelete": false,
+    "liveServer.settings.CustomBrowser": "firefox",
+    "liveServer.settings.fullReload": true,
+    "liveServer.settings.NoBrowser": true,
+    "liveServer.settings.donotShowInfoMsg": true,
+    "settingsSync.ignoredSettings": [],
 }
