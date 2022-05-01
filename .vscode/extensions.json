@@ -1,6 +1,7 @@
 {
     "recommendations": [
         "shan.code-settings-sync",
-        "xdebug.php-debug"
+        "xdebug.php-debug",
+        "ritwickdey.LiveServer"
     ]
 }
