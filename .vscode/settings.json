@@ -1,6 +1,36 @@
 {
-    "liveServer.settings.CustomBrowser": "firefox",
+    "liveServer.settings.CustomBrowser": "chrome",
     "liveServer.settings.fullReload": true,
     "liveServer.settings.useBrowserPreview": true,
-    "liveServer.settings.ChromeDebuggingAttachment": false
+    // "liveServer.settings.ChromeDebuggingAttachment": false,
+    // "sync.autoDownload": true,
+    // "sync.syncExtensions": false,
+    // "sync.removeExtensions": false,
+    // "sync.quietSync": true,
+    // "sync.forceUpload": true,
+    // "sync.forceDownload": true,
+    // "sync.autoUpload": true,
+    // "liveServer.settings.NoBrowser": true,
+    // "liveServer.settings.https": {
+    //     "enable": true,
+    //     "cert": "",
+    //     "key": "",
+    //     "passphrase": ""
+    // },
+    "liveServer.settings.ignoreFiles": [
+        
+
+        ".vscode/**",
+        "**/*.scss",
+        "**/*.sass",
+        "**/*.ts"
+    ],
+    // "liveServer.settings.useWebExt": false,
+    // "liveServer.settings.useLocalIp": false,
+    // "liveServer.settings.showOnStatusbar": true,
+    // "liveServer.settings.proxy": {
+    //     "enable": true,
+    //     "baseUri": "/",
+    //     "proxyUri": "http://127.0.0.1:80"
+    // },
 }
