@@ -570,7 +570,6 @@ html{
     grid-auto-rows: 380px;
     gap: 2.5rem;
     padding: 0;
-    width: 100%;
     height: 65vh;
 }
 
@@ -587,7 +586,7 @@ html{
     -o-border-radius: 8px;
 }
 
-.images .first{
+.box-container1 .images .first{
     width:100%;
     height:100%;
 }
@@ -1010,20 +1009,27 @@ html{
         margin:2rem;
     }
     /****SERVICE CARD RESPONSIVENESS*****/
+    .Service-container {
+        margin: 5rem;
+    }
+    .Service-container hr{
+        margin: 0 ;
+    }
+
+
     .Service-container .box-container1{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-auto-rows: 300px;
         height: 100vh;
-        padding: 0;
+        gap: 2rem;
     }
 
     .images {
         position: relative;
         top:5%;
         overflow: hidden;
-        margin: 0 2rem;
-        max-width: 300px;
+        width: 300px;
         box-shadow: var(--card-box-shadow);
         border-radius: 8px;
         -webkit-border-radius: 8px;
@@ -1035,6 +1041,8 @@ html{
     .images .first{
         width:100%;
         height:100%;
+        position: absolute;
+        left: 0;
     }
     
     .images .back{
@@ -1160,9 +1168,9 @@ html{
         margin-left: 8rem;
     }
     .foot .footer-space{
-        height: 78vh;
-    }
-     
+        height: 90vh;
+  }
+   
     .footer-content{
         text-align: center;
         color:var(--black);
@@ -1174,7 +1182,7 @@ html{
         position: absolute;
         bottom: 0;
         width: 100%;
-        height: 85%;
+        height: 90%;
         display: grid;
         /* align-items: flex-end; */
         background-color:var(--black);
@@ -1770,6 +1778,9 @@ html{
         margin:2rem;
     }
     /*SERVICE CARD RESPONSIVENESS*/
+    .Service-container{
+        margin: 0 5rem;
+    }
     .box-container1{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -2448,8 +2459,7 @@ html{
         top: 5%;
         overflow: hidden;
         margin: 0 5rem;
-        
-        align-content: center;
+        /* align-content: center; */
         box-shadow: var(--card-box-shadow);
         border-radius: 8px;
         -webkit-border-radius: 8px;
@@ -2470,6 +2480,10 @@ html{
         line-height: 1.3;
         color: var(--white);
         font-size: 15px;
+    }
+
+    .box-container1 .images .back h4{
+        margin-top: 4rem;
     }
     
     .modal-card{
