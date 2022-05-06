@@ -635,7 +635,7 @@ html{
     font-family: 'Cinzel', serif;
 }
 
-.back, h2, .description {
+.back, h4, .description {
     text-align: center;
     font-size: 18px;
 }
@@ -788,6 +788,9 @@ html{
 }
 
 /*****FOOTER STYLING FOR DESKTOP DEVICE*****/
+.footing .footer-space{
+    height: 80vh;
+}
 .footing .footer-space .footer-content {
     padding: 2rem 5rem 0 5rem;
     text-align: center;
@@ -797,24 +800,13 @@ html{
     font-family: 'Quintessential', cursive;
 }
 .footer-modal {
-    position: absolute;
-    bottom: -100%;
+    position: fixed;
+    bottom:0;
     width: 100%;
     display: grid;
     overflow: hidden;
-    align-items: flex-end;
     background-color:var(--black);
-    transition:.5s;
-    -webkit-transition:.5s;
-    -moz-transition:.5s;
-    -ms-transition:.5s;
-    -o-transition:.5s;
 }
-
-.footer-space:hover .footer-modal {
-    bottom: 0;
-}
-
 .footing .footer-space .footer-modal .down-side{
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -1076,10 +1068,6 @@ html{
         font-family: 'Cinzel', serif;
     }
     
-    .back, h2, .description {
-        text-align: center;
-        font-size: 15px;
-    }
     .card-foot{
         text-align: center;
         font-family: 'Cormorant Upright', serif;
@@ -1137,7 +1125,7 @@ html{
         padding: 5px;
     }
     
-    .footing .footer-space .footer-modal .down-side .number h2{
+    .footing .footer-space .footer-modal .down-side .number h3{
         padding-left: .7rem;
     }
     .footing .footer-space .footer-modal .down-side .number{
@@ -1340,10 +1328,6 @@ html{
         font-family: 'Cinzel', serif;
     }
     
-    .back, h2, .description {
-        text-align: center;
-        font-size: 15px;
-    }
     .card-foot{
         text-align: center;
         font-family: 'Cormorant Upright', serif;
@@ -1401,7 +1385,7 @@ html{
         padding: 5px;
     }
     
-    .footing .footer-space .footer-modal .down-side .number h2{
+    .footing .footer-space .footer-modal .down-side .number h3{
         padding-left: .7rem;
     }
     .footing .footer-space .footer-modal .down-side .number{
@@ -1658,7 +1642,7 @@ html{
         padding: 5px;
     }
     
-    .footing .footer-space .footer-modal .down-side .number h2{
+    .footing .footer-space .footer-modal .down-side .number h3{
         padding-left: .7rem;
     }
     .footing .footer-space .footer-modal .down-side .number{
@@ -1683,7 +1667,8 @@ html{
     .footer-content{
         text-align: center;
         color:var(--black);
-        font-size: 12px;
+        font-size: 18px;
+        padding: 0 10rem;
         width: 100%;
         font-family: 'Quintessential', cursive;
     }
