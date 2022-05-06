@@ -50,4 +50,5 @@
     "liveServer.settings.NoBrowser": true,
     "liveServer.settings.donotShowInfoMsg": true,
     "settingsSync.ignoredSettings": [],
+    "sync.autoDownload": true,
 }
