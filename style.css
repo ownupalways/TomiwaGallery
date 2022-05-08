@@ -354,13 +354,16 @@ html{
     -o-border-radius: 2px;
 }
 
-/*STYLING INDEX PAGE */
-.parent{
+/*****STYLING INDEX PAGE *****/
+.parent-dex{
+    width: 100%;
+    height: fit-content;
+}
+
+.parent-dex .parent{
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-auto-rows: 350px;
-    align-self:flex-end;
-    height: 90vh;
     padding: 1rem 4rem;
 }
 
@@ -556,7 +559,6 @@ html{
     color: var(--pinky);
     box-shadow: var(--box-shadow);
 }
-
 
 /*Service Page styling*/
 .Service-container{
@@ -919,12 +921,13 @@ html{
 
 /**********MEDIA QUERY FOR MAX-WIDTH:768PX******/
 @media only screen and (max-width: 768px) {
-    .parent{
+    .parent-dex .parent{
         display:grid;
         grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
         grid-auto-rows: 350px;
-        height: 70vh;
         gap: 2rem;
+        justify-items: center;
+        padding: 0;
     }
 
     .parent .box{
@@ -937,14 +940,18 @@ html{
         text-align: justify;
         margin: 2rem;
     }
-    .parent .box-top{
+    /* .parent .box-top{
         margin-bottom: 4rem;
+    } */
+
+    .parent .box-down {
+        margin-top: 2rem;
     }
     .mySlides{
         max-width: 270px;
         max-height: 500px;
         position: relative;
-        margin: 4rem 1.5em 1.5em 1.5em;
+        margin: 0 1.5em 1.5em 1.5em;
     }
 
     .responsive{
