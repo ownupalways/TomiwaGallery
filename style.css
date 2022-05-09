@@ -936,6 +936,15 @@ html{
     .modal-content .modal-profile{
         width:90%;
     }
+
+    .modal #close{
+        position: absolute;
+        top: 10%;
+        right:3%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
     .parent-dex .parent{
         display:grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
