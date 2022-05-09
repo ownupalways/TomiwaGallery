@@ -475,6 +475,8 @@ html{
     height: 100%;
     background:var(--tag);
 }
+
+
 /*social media handle styling*/
 .modal-content .modal-profile{
     width:30%;
@@ -489,7 +491,9 @@ html{
     -ms-border-radius: 5px;
     -o-border-radius: 5px;
 }
-
+.modal-profile .modal-name{
+    text-align: center;
+}
 .modal #close{
     position: absolute;
     top: 22%;
@@ -566,7 +570,13 @@ html{
     width: 100%;
     height: 100%;
 }
+.Service-container .title {
+    padding:0 14rem;
+}
 
+.Service-container hr{
+    margin: 0 15rem;
+}
 .Service-container .box-container1 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -922,6 +932,10 @@ html{
 
 /**********MEDIA QUERY FOR MAX-WIDTH:768PX******/
 @media only screen and (max-width: 768px) {
+
+    .modal-content .modal-profile{
+        width:90%;
+    }
     .parent-dex .parent{
         display:grid;
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -1001,6 +1015,13 @@ html{
         margin:2rem;
     }
     /****SERVICE CARD RESPONSIVENESS*******/
+    .Service-container .title {
+        padding:0 2rem;
+    }
+    
+    .Service-container hr{
+        margin: 0 3.3rem;
+    } 
     .Service-container .box-container1{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
