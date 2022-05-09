@@ -357,7 +357,7 @@ html{
 /*****STYLING INDEX PAGE *****/
 .parent-dex{
     width: 100%;
-    height: fit-content;
+    height: 100vh;
 }
 
 .parent-dex .parent{
@@ -365,6 +365,7 @@ html{
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-auto-rows: 350px;
     padding: 1rem 4rem;
+    height: 100%;
 }
 
 .parent .box{
@@ -862,7 +863,7 @@ html{
 
 .footing .footer-space .footer-modal .down-side .about{
     align-self: flex-start;
-    margin-left: 15rem;
+    margin-left: 8rem;
 }
 .contact .About-us {
     display: block;
@@ -923,15 +924,16 @@ html{
 @media only screen and (max-width: 768px) {
     .parent-dex .parent{
         display:grid;
-        grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         grid-auto-rows: 350px;
         gap: 2rem;
         justify-items: center;
         padding: 0;
+        height: auto;
     }
 
     .parent .box{
-        max-width: 270px;
+        max-width: 300px;
         max-height: 300px;
         font-size: 15px;
         line-height: 2;
@@ -940,15 +942,12 @@ html{
         text-align: justify;
         margin: 2rem;
     }
-    /* .parent .box-top{
-        margin-bottom: 4rem;
-    } */
 
     .parent .box-down {
-        margin-top: 2rem;
+        margin-top: 0;
     }
     .mySlides{
-        max-width: 270px;
+        max-width: 300px;
         max-height: 500px;
         position: relative;
         margin: 0 1.5em 1.5em 1.5em;
