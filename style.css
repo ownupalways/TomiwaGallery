@@ -1024,12 +1024,14 @@ html{
     }
     /*3*Navigation bar styling*3*/
     .navbar .icon {
-        margin-top: 0.8rem;
+        margin-top: 0.6rem;
     }
 
     .navbar .icon div{
         top: 5%;
         font-size: 18px;
+        height: 3rem;
+        width: 3rem;
     }
 
     /****ABOUT PAGE STYLING*****/
@@ -1249,7 +1251,7 @@ html{
         display: inline-block;
         width: 55px;
         height: 50px;
-        padding: 15px;
+        padding: 10px 2px;
     }
 
     .navbar .nav-btn label span{
