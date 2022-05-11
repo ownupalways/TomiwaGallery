@@ -704,7 +704,7 @@ html{
 }
 
 /*Place Order Page*/
-.order-container{
+/* .order-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -712,6 +712,11 @@ html{
     width: 100%;
     height: 100vh;
     background-color: var(--white);
+} */
+
+.order-container{
+    width: 100%;
+    height: 100%;
 }
 
 .orderList{
