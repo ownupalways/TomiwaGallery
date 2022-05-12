@@ -1312,7 +1312,7 @@ html{
     }
 
     .dropBtn{
-        padding:10px;
+        padding-left:30px;
         background-color: transparent;
         border: none;
         margin-right: 5rem;
@@ -1321,6 +1321,20 @@ html{
         color: var(--white);
         z-index: 1;
     }
+    .dropdown:hover .dropBtn{
+        width: 100%;
+        background-color: var(--white);
+    }
+
+    .dropdown-content a:hover{
+        background-color: var(--white);
+        color: var(--black);
+        width: 100%;
+    }
+
+    /* .dropdown:hover .dropdown-content {
+        display: block;
+    } */
     .dropdown{
         position: relative;
         display: block;
