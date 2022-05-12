@@ -1323,7 +1323,7 @@ html{
     }
     .dropdown{
         position: relative;
-        display: inline-block;
+        display: block;
     }
     
     .dropdown-content{
@@ -1358,7 +1358,7 @@ html{
         display: block;
     }
     .dropdown:hover .dropBtn{
-        background-color: var(--link);
+        background-color: var(--white);
         padding: 15px;
         transition: .5s ease-in;
         border-radius: 4px 4px 0 0;
