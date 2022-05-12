@@ -43,7 +43,7 @@ html{
     --pink:rgba(123, 73, 123, 0.9);
     --pink1:rgba(123, 73, 123, 0.5);
     --pink2:rgba(123, 73, 123, 0.2);
-    --lightPink:rgba(123, 73, 123, 0.1);
+    --lightPink:rgba(82, 77, 82, 0.2);
     --box-shadow:0 5px 10px rgba(0,0,0.1);
     --box-shadow2:0 5px 10px hsl(0, 1%, 73%);
     --card-box-shadow: 0 10px 15px 5px rgba(92, 99, 105, 0.5);
@@ -1272,19 +1272,21 @@ html{
     .navbar .nav-link-container{
         position: relative;
         width: 100%;
-        height: 230vh;
-        background-color: var(--lightPink);
+        height: 210vh;
+        background: var(--lightPink);
         top: 75%;
+        z-index: 1;
     }
     .navbar .nav-link{
         position: absolute;
-        margin-top: -4.7rem;
+        /* margin-top: -4.7rem; */
         display: block;
         width:60%;
+        height: 40%;
         background: var(--pink);
         transition: all 0.5s ease-in;
         overflow-y: hidden;
-        top: 50px;
+        top: 0;
         float: right;
         right: 0;
         -webkit-transition: all 0.5s ease-in;
