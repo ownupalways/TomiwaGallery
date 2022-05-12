@@ -1293,7 +1293,7 @@ html{
         font-weight: bolder;
     }
 
-    .navbar .nav-link a:hover{
+    /* .navbar .nav-link a:hover{
         color: var(--black);
         background-color:var(--white);
         border-radius: 0;
@@ -1301,7 +1301,7 @@ html{
         -moz-border-radius: 0;
         -ms-border-radius: 0;
         -o-border-radius: 0;
-}
+    } */
     /*when nav toggle button is not checked*/
     .navbar #nav-check:not(:checked) ~ .nav-link{
         height: 0;
@@ -1309,13 +1309,12 @@ html{
 
    /*when nav toggle button is checked*/
     .navbar #nav-check:checked ~ .nav-link{
-        height: calc(100vh - 60px);
+        height: calc(200vh - 60px);
         overflow-y: auto;
     }
 
     .dropBtn:not(a){
         padding: 10px;
-        background-color: transparent;
         border: none;
         margin-right: 5rem;
         font-size: 22px;
@@ -1335,15 +1334,6 @@ html{
         width: 100%;
     }
 
-    .dropdown-content{
-        background-color: var(--pink);
-        color: var(--black);
-        width: 100%;
-    }
-
-    /* .dropdown:hover .dropdown-content {
-        display: block;
-    } */
     .dropdown{
         position: relative;
         display: block;
@@ -1353,9 +1343,8 @@ html{
         display: none;
         position: absolute;
         transition: 5s all ease-in-out;
-        box-shadow: var(--card-box-shadow);
-        background-color: var(--pink);
-        min-width:120px;
+        background-color:transparent;
+        width:100%;
         z-index: 1;
         -webkit-transition: 5s all ease-in-out;
         -moz-transition: 5s all ease-in-out;
@@ -1372,20 +1361,15 @@ html{
         font-weight: bolder;
     }
     
-    .dropdown-content a:hover{
-        background-color: var(--white);
-        color: var(--black);
-    }
-    
     .dropdown:hover .dropdown-content {
         display: block;
     }
     .dropdown .dropBtn:first-child:hover{
-        background-color: var(--link);
+        background-color: var(--white);
         /* padding: 15px; */
         transition: .5s ease-in;
         border-radius: 4px 4px 0 0;
-        color:var(--white);
+        color:var(--black);
         -webkit-border-radius: 4px 4px 0 0;
         -moz-border-radius: 4px 4px 0 0;
         -ms-border-radius: 4px 4px 0 0;
