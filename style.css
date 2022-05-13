@@ -1325,7 +1325,7 @@ html{
 
    /*when nav toggle button is checked*/
     .navbar #nav-check:checked ~ .nav-link-container{
-        height: calc(180vh - 60px);
+        height: calc(190vh - 60px);
         overflow-y: auto;
     }
 
