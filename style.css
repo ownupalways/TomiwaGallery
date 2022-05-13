@@ -1274,7 +1274,7 @@ html{
         height: 210vh;
         background: var(--lightPink);
         top: 75%;
-        z-index: 1;
+        z-index: 2;
     }
     .navbar .nav-link{
         position: absolute;

@@ -53,7 +53,6 @@
     //slide automation
 
     let slideIndex = 0;
-
     showSlides();
 
     function showSlides() {
@@ -67,12 +66,11 @@
 
         slideIndex++;
 
-        if(slideIndex > slides.length){
-            slideIndex = 0;
-        }else {
-                slides[slideIndex -1].style.display = "block";
-            }
-            
+        if(slideIndex > slides.length)
+            {slideIndex = 1;}
+
+        slides[slideIndex -1].style.display = "block";
+                        
         //changes image every 3 second
         setTimeout(showSlides, 3000);
     }
