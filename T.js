@@ -85,28 +85,30 @@ function showSlides() {
         setTimeout(showSlides, 3000);
 }
 
-//Menu Operation
-
+//Menu Tab  Operation
 var MenuContainer = document.getElementsByClassName("nav-link-container")[0]
-// console.log(MenuContainer)
 var Menulist =document.getElementsByClassName("nav-btn")[0]
 
 var CloseTab = document.getElementsByClassName("closeX")[0]
 
-// function MenuGear() {
-   
-// }
 function MenuGear() {
     MenuContainer.style.display = "block"
     Menulist.style.display = "none"
     CloseTab.style.display = "Block"
 }
 
-// MenuButton = MenuContainer.addEventListener('click', function(event) {
-//    var MenuBoard = event.target
-// })
+
+function CloseMenu() {
+    MenuContainer.style.display = "none"
+    Menulist.style.display = "block"
+    CloseTab.style.display = "none"
+}
+
+
 window.onclick = (event) => {
     if (event.target == MenuContainer) {
         MenuContainer.style.display = "none"
+        Menulist.style.display = "block"
+        CloseTab.style.display = "none"
     }
 }
