@@ -102,10 +102,13 @@ html{
 
 /*Navigation bar responsiveness. toggle button*/
 
-.navbar #nav-check, .navbar .nav-btn{
+.navbar .nav-btn{
     display: none;
 }
-
+.navbar .closeX{
+    display: none;
+    color: var(--white);
+}
 /*DropDown Element*/
 .dropBtn:not(a){
     padding: 10px 30px 10px 0;
@@ -363,7 +366,7 @@ html{
     height: 100vh;
 }
 
-.parent-dex .parent{
+.parent-dex .parent  {
     display:grid;
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-auto-rows: 350px;
@@ -412,9 +415,14 @@ html{
     background: var(--background);
     z-index:1;
 }
+
+.parent .dots-container{
+    text-align: center;
+    width: 100%;
+}
  .dot {
-     height: 15px;
-     width: 15px;
+     height: 12px;
+     width: 12px;
      margin: 0 2px;
      background-color: #bbb;
      display: inline-block;
@@ -1268,32 +1276,45 @@ html{
         position: absolute;
         top: 0;
         right: 0;
-    }
-
-    .navbar .nav-btn label{
-        display: inline-block;
         width: 55px;
         height: 50px;
         padding: 10px 2px;
     }
 
-    .navbar .nav-btn label span{
+    .navbar .closeX {
+        display: none;
+        position: absolute;
+        top: -1%;
+        right: 0;
+        width: 55px;
+        height: 50px;
+        text-align: center;
+        font-size: 45px;
+        padding: 0 10px 12px 4px;
+    }
+
+    .navbar .nav-btn span{
         display: block;
         height: 10px;
         width: 25px;
         border-top: 3px solid var(--white);
     }
 
-    .navbar .nav-btn label:hover, .navbar #nav-check:checked ~ .nav-btn label{
+
+    .navbar .nav-btn:hover{
         background-color: var(--pink);
     }
     
+    .navbar .closeX:hover{
+        background-color: var(--pink);
+    }
     .navbar .nav-link-container{
+        display: none;
         position: relative;
         width: 100%;
         height: 210vh;
         background: var(--lightPink);
-        top: 75%;
+        margin-top: 38px;
         z-index: 2;
     }
     .navbar .nav-link{
@@ -1339,13 +1360,13 @@ html{
 }
     
     /*when nav toggle button is not checked*/
-    .navbar #nav-check:not(:checked) ~ .nav-link-container{
+    /* .navbar #nav-check:not(:checked) ~ .nav-link-container{
         height: 0;
-    }
+    } */
 
    /*when nav toggle button is checked*/
-    .navbar #nav-check:checked ~ .nav-link-container{
-        height: calc(190vh - 60px);
+    .navbar .nav-link-container{
+        height: calc(190vh - 50px);
         overflow-y: auto;
     }
 
