@@ -42,73 +42,101 @@ RegisterClosePad.onclick = () => {
     Register.style.display = "none"
 }
 
-window.onclick = (event) => {
-    if (event.target == UserAccountModal) {
-        UserAccountModal.style.display = "none"
-    }else if(event.target == Register) {
-        Register.style.display = "none"
-    }
-}
+// window.onclick = (event) => {
+//     if (event.target == UserAccountModal) {
+//         UserAccountModal.style.display = "none"
+//     }
+// }
 
+// window.onclick = (event) => {
+//     if(event.target == Register) {
+//         Register.style.display = "none"
+//     }
+// }
 //slide automation
 
-let slideIndex = 0;
+
 
 showSlides();
 
+
 function showSlides() {
     let i;
+    let slideIndex = 0;
     let slides = document.getElementsByClassName("mySlides");
-
     let dots = document.getElementsByClassName("dot");
     
         for(i = 0; i < slides.length; i++) {
 
-            slides[i].style.display ="none";
+             var SlideCount = slides[i]
+             SlideCount.style.display ="none";
         }
 
-    slideIndex++;
+        
+        slideIndex++;
 
-    if(slideIndex > slides.length)
-        {slideIndex = 1}
+        if(slideIndex > slides.length)
+            {slideIndex = 1
 
-        for(i = 0; i < dots.length; i++) {
+            for(i = 0; i < dots.length; i++) {
 
-            dots[i].className = dots[i].className.replace(" active", "");
+                var dotRows = dots[i]
+
+                dotRows.className = dots[i].className.replace(" active", "");
+            }
+
+            slides[slideIndex -1].style.display = "block";
+                            
+            dots[slideIndex-1].className += " active";
+
+            //changes image every 3 second
+            setTimeout(showSlides, 3000);
         }
 
-        slides[slideIndex -1].style.display = "block";
-                        
-        dots[slideIndex-1].className += " active";
-
-        //changes image every 3 second
-        setTimeout(showSlides, 3000);
 }
 
 //Menu Tab  Operation
-var MenuContainer = document.getElementsByClassName("nav-link-container")[0]
-var Menulist =document.getElementsByClassName("nav-btn")[0]
+let MenuContainer = document.getElementsByClassName("nav-link-container")[0]
+let Menulist = document.getElementsByClassName("nav-btn")[0]
 
-var CloseTab = document.getElementsByClassName("closeX")[0]
+let CloseTab = document.getElementsByClassName("closeX")[0]
 
 function MenuGear() {
+    var MenuContainer = document.getElementsByClassName("nav-link-container")[0]
+    var Menulist = document.getElementsByClassName("nav-btn")[0]
+
+    var CloseTab = document.getElementsByClassName("closeX")[0]
+
     MenuContainer.style.display = "block"
     Menulist.style.display = "none"
-    CloseTab.style.display = "Block"
+    CloseTab.style.display = "block"
 }
 
-
 function CloseMenu() {
+    var MenuContainer = document.getElementsByClassName("nav-link-container")[0]
+    var Menulist = document.getElementsByClassName("nav-btn")[0]
+
+    var CloseTab = document.getElementsByClassName("closeX")[0]
     MenuContainer.style.display = "none"
     Menulist.style.display = "block"
     CloseTab.style.display = "none"
 }
 
-
 window.onclick = (event) => {
+    var MenuContainer = document.getElementsByClassName("nav-link-container")[0]
+    var Menulist = document.getElementsByClassName("nav-btn")[0]
+
+    var CloseTab = document.getElementsByClassName("closeX")[0]
     if (event.target == MenuContainer) {
         MenuContainer.style.display = "none"
         Menulist.style.display = "block"
         CloseTab.style.display = "none"
+    }
+    if (event.target == UserAccountModal) {
+       UserAccountModal.style.display = "none"
+    }
+
+    if (event.target == Register) {
+        Register.style.display = "none"
     }
 }
