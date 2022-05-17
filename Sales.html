@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creativity|Art|Design</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="">
     <script src="T.js" defer></script>
+    <!-- <link rel="shortcut icon" href=""> -->
     <!--font awesome cdnjs link-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -63,21 +63,23 @@
             </a>
         </div>
     </div>
+
     <div class="form-modal loginModal" id="LoginModalPage">
-        <span id="closeLogin" onclick="close()">&times;</span>
-        <div class="LoginPage form">
-            <form action="" class="login">
-                <h1>Login Now</h1>
-                <input type="email" placeholder="Email">
-                <input type="password" placeholder="Password">
-                <input type="submit" value="Login">
-                <p>Forget Password?<a href="#" >Click Here</a></p>
-                <p>New Client<a class="NewAccount"  onclick="NewAccount()">Register here</a></p>
-            </form>
-        </div>
+            <span id="closeBox" onclick="closeAccountOne()">&times;</span>
+            <div class="LoginPage form">
+                <form action="" class="login">
+                    <h1>Login Now</h1>
+                    <input type="email" placeholder="Email">
+                    <input type="password" placeholder="Password">
+                    <input type="submit" value="Login">
+                    <p>Forget Password?<a href="#">Click Here</a></p>
+                    <p>New Client<a class="NewAccount" onclick="NewAccount()">Register here</a></p>
+                </form>
+            </div>
     </div>
+       
     <div class="regModal" id="RegistrationModalPage">
-        <span id="closeRegistration" onclick="close()">&times;</span>
+        <span id="closeBox" onclick="closeAccountTwo()">&times;</span>
         <div class="registerPage form">
             <form action="" class="register">
                 <h1>Register</h1>
@@ -96,7 +98,7 @@
                 <input type="text" placeholder="Local Government Area">
                 <input type="text" placeholder="Residential Address">
                 <input type="submit" value="Register">
-                <p>Existing Client <a  onclick="user()">Login here</a></p>
+                <p>Existing Client <a onclick="user()">Login here</a></p>
             </form>
         </div>
     </div>
@@ -113,28 +115,25 @@
             </div>
         </div>
     </div>
-    
+        
     <div id="myModal" class="modal">
-        <span id="close">&times;</span>
-        <div class="modal-content">
-            <div class="modal-profile">
-                <div class="modal-image">
-                    <img src="images/t.jpg">
-                </div>
-                <h3 class="modal-name">Oluwadipe Tomiwa Esther</h3>
-                <!--Social Media handles-->
-                <div class="modal-share">
-                    <div class="fas fa-envelope"><span>tomiwaesther1@gmail.com</span></div>
-                    <div class="fas fa-phone"><span>+2348026470304</span></div>
-                    <div class="fas fa-phone"><span>+2347041364188</span></div>
-                </div>
+        <div class="modal-profile">
+            <span id="close">&times;</span>
+            <div class="modal-image">
+                <img src="images/t.jpg">
+            </div>
+            <h4 class="modal-name">Oluwadipe Tomiwa Esther</h4>
+            <!--Social Media handles-->
+            <div class="modal-share">
+                <div class="fas fa-envelope"><span>tomiwaesther1@gmail.com</span></div>
+                <div class="fas fa-phone"><span>+2348026470304</span></div>
+                <div class="fas fa-phone"><span>+2347041364188</span></div>
             </div>
         </div>
     </div>
 
     <div class="footing">
         <div class="footer-space">
-            <div class="footer-content">The traditional values and beauty that attached to the designs of a Tye-dyed fabric makes it unique amongst all fabric designs. In this wise, we produce our design with colorful and lasting dyes on durable fabrics to customers' satisfaction.</div>
             <div class="footer-modal">
                 <footer class="down-side">
                     <div class="share">
@@ -158,18 +157,19 @@
                     </div>
 
                     <div class="contact about">
-                       <div class="about-container">
-                        <h3 style="color: white; margin-bottom: 5px;">About us:</h3>
-                        <a href="About.html" class="About-us">Tomest Art-Wall</a>
-                        <a id="myBtn" class="About-us">View Artist</a>
-                       </div>
+                    <div class="about-container">
+                            <h3 style="color: white;">About us:</h3>
+                            <a href="About.html" class="About-us">Tomest Art-Wall</a>
+                            <a id="myBtn" class="About-us">View Artist</a>
                     </div>
-
-                    <div class="developer">
-                        <p>Copyright &copy; 2021 <br> Powered by HBTush Comsat <br> All rights reserved.</p>
-                    </div>
-
+                    </div>    
                 </footer>
+                <hr>
+                <div class="developer" style="color:white ;">
+                    <p>
+                        Copyright <span style="font-size: 14px;">&copy;</span> 2021  <strong style="margin: 0 1rem">|</strong> All rights reserved   <strong style="margin: 0 1rem">|</strong> Powered by HBTush Comsat.
+                    </p>
+                </div>
             </div>
         </div>
     </div>

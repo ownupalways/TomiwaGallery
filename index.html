@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creativity|Art|Design</title>
     <link rel="stylesheet" href="style.css">
-    <!-- <link rel="shortcut icon" href=""> -->
     <script src="T.js" defer></script>
+    <!-- <link rel="shortcut icon" href=""> -->
     <!--font awesome cdnjs link-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -65,21 +65,20 @@
         </div>
         
         <div class="form-modal loginModal" id="LoginModalPage">
-            <span id="closeLogin" onclick="close()">&times;</span>
+            <span id="closeBox" onclick="closeAccountOne()">&times;</span>
             <div class="LoginPage form">
                 <form action="" class="login">
                     <h1>Login Now</h1>
                     <input type="email" placeholder="Email">
                     <input type="password" placeholder="Password">
                     <input type="submit" value="Login">
-                    <p>Forget Password?<a href="#" >Click Here</a></p>
+                    <p>Forget Password?<a href="#">Click Here</a></p>
                     <p>New Client<a class="NewAccount" onclick="NewAccount()">Register here</a></p>
                 </form>
             </div>
         </div>
-
         <div class="regModal" id="RegistrationModalPage">
-            <span id="closeRegistration" onclick="close()">&times;</span>
+            <span id="closeBox" onclick="closeAccountTwo()">&times;</span>
             <div class="registerPage form">
                 <form action="" class="register">
                     <h1>Register</h1>
@@ -118,14 +117,6 @@
                         <p style="font-size: 20px; font-weight: 100; font-family:'Redressed', cursive;">Delicious taste you can't</p>
                         <p style="font-size: 25px; font-weight:normal; font-family:'Redressed', cursive;">resist...</p>
                     </div>
-                    <div class="dots-container">
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
             
                 </div>
 
@@ -134,15 +125,7 @@
                     <div class="text">
                         <p style="font-family: 'Cormorant Upright', serif;">Textile</p>
                     </div>
-                    <div class="dots-container">
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-            
+                    
                 </div>
 
                 <div class="mySlides fade">
@@ -150,15 +133,7 @@
                     <div class="text">
                         <p style="font-family: 'Cormorant Upright', serif;">Graphics</p>
                     </div>
-                    <div class="dots-container">
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-            
+                    
                 </div>
 
                 <div class="mySlides fade">
@@ -166,15 +141,7 @@
                     <div class="text">
                         <p style="font-family: 'Cormorant Upright', serif;">Paper craft</p>
                     </div>
-                    <div class="dots-container">
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-            
+                   
                 </div>
 
                 <div class="mySlides fade">
@@ -182,15 +149,7 @@
                     <div class="text">
                         <p style="font-family: 'Cormorant Upright', serif;">Pencil work</p>
                     </div>
-                    <div class="dots-container">
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-            
+                    
                 </div>
 
                 <div class="mySlides fade">
@@ -198,18 +157,18 @@
                     <div class="text">
                         <p style="font-family: 'Cormorant Upright', serif;">Tye-dye</p>
                     </div>
-                    <div class="dots-container">
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                        <span class="dot"></span>
-                    </div>
-            
+                   
                 </div>
-
-               
+                
+                <div class="dots-container">
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+        
             </div>
 
             <div class="box box-down parent-child">
@@ -220,19 +179,17 @@
 
        
         <div id="myModal" class="modal">
-            <span id="close">&times;</span>
-            <div class="modal-content">
-                <div class="modal-profile">
-                    <div class="modal-image">
-                        <img src="images/t.jpg">
-                    </div>
-                    <h3 class="modal-name">Oluwadipe Tomiwa Esther</h3>
-                    <!--Social Media handles-->
-                    <div class="modal-share">
-                        <div class="fas fa-envelope"><span>tomiwaesther1@gmail.com</span></div>
-                        <div class="fas fa-phone"><span>+2348026470304</span></div>
-                        <div class="fas fa-phone"><span>+2347041364188</span></div>
-                    </div>            
+            <div class="modal-profile">
+                <span id="close">&times;</span>
+                <div class="modal-image">
+                    <img src="images/t.jpg">
+                </div>
+                <h4 class="modal-name">Oluwadipe Tomiwa Esther</h4>
+                <!--Social Media handles-->
+                <div class="modal-share">
+                    <div class="fas fa-envelope"><span>tomiwaesther1@gmail.com</span></div>
+                    <div class="fas fa-phone"><span>+2348026470304</span></div>
+                    <div class="fas fa-phone"><span>+2347041364188</span></div>
                 </div>
             </div>
         </div>
@@ -267,19 +224,56 @@
                                 <a href="About.html" class="About-us">Tomest Art-Wall</a>
                                 <!-- <a id="myBtn" class="About-us">View Artist</a> -->
                            </div>
-                        </div>
-    
-                        <div class="developer">
-                            <p>Copyright &copy; 2021 <br> Powered by HBTush Comsat <br> All rights reserved.</p>
-                        </div>
-    
+                        </div>    
                     </footer>
+                    <hr>
+                    <div class="developer" style="color:white ;">
+                        <p>
+                            Copyright <span style="font-size: 14px;">&copy;</span> 2021  <strong style="margin: 0 1rem">|</strong> All rights reserved   <strong style="margin: 0 1rem">|</strong> Powered by HBTush Comsat.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
 
     </div>
-    
+    <script>
+        let slideIndex = 0;
+        showSlides()
+        function showSlides() {
+            let i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            
+            for(i = 0; i < slides.length; i++) {
+
+                let SlideContent = slides[i]
+
+                SlideContent.style.display ="none";
+            }
+
+            slideIndex++;
+
+            if(slideIndex > slides.length){
+                slideIndex = 1
+            }
+
+            for(i = 0; i < dots.length; i++) {
+
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+
+            let SlideCount = slides[slideIndex -1]
+
+            SlideCount.style.display = "block";
+
+            dots[slideIndex -1].className += " active";
+
+            //changes image every 3 second
+            setTimeout(showSlides, 4000);
+        }
+
+    </script>
 </body>
 
 </html>
