@@ -1266,7 +1266,7 @@ html{
         right: 0;
         width: 55px;
         height: 50px;
-        padding: 10px 2px;
+        padding: 11px 2px;
     }
 
     .navbar .closeX {
@@ -1275,10 +1275,10 @@ html{
         top: -1%;
         right: 0;
         width: 55px;
-        height: 57px;
+        height: 60px;
         text-align: center;
         font-size: 45px;
-        padding: 0 10px 12px 4px;
+        padding: 6px 10px 13px 4px;
     }
 
     .navbar .nav-btn span{
